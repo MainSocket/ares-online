@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><head>
+<title>离子炮</title>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.17267"></HEAD>
+<BODY>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>离子炮爆炸</STRONG><BR><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>IonCannon= 
+(boolean)</STRONG></FONT><BR>是否在该弹头生效时启动离子炮逻辑。</SPAN></P>
+<P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>IonCannon.Blast= 
+(Animation)</STRONG></FONT><BR>打击区域可选的第一个动画，这个只在弹头撞击地面时使用，如果打击区域在水上，会使用[CombatDamage]&gt;SplashList的动画，默认[General]&gt;IonBlast，写none可禁用。<BR><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>IonCannon.Beam= 
+(Animation)</STRONG></FONT><BR>打击区域可选的第二个动画，默认[General]&gt;IonBeam，写none可禁用。<BR><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>IonCannon.Warhead= 
+(Warhead)</STRONG></FONT><BR>离子炮弹头，默认[CombatDamage]&gt;IonCannonWarhead，写none可禁用<FONT color=#000000>。</FONT></SPAN></P>
+<P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[</STRONG></FONT><FONT color=#800080><STRONG>Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>IonCannon.Damage= 
+(integer - 
+hitpoints)</STRONG></FONT><BR>伤害，默认[CombatDamage]&gt;IonCannonDamage。<BR><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>IonCannon.Rock= 
+(boolean)</STRONG></FONT><BR>是否VXL载具会被掀起，默认是</SPAN></P>
+<P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG><FONT color=#000000>波纹</FONT></STRONG></SPAN></P>
+<P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG></FONT><STRONG><FONT color=#800080 size=3>IonCannon.Ripple= (integer - frames) 
+<BR></FONT></STRONG><FONT color=#000000 size=3>TS中</FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">离子炮的波纹视觉效果，纯视觉效果，没有实际影响，</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">取值范围在0到79之间，包含0和79。IonCannon=yes默认79，其他默认0。</SPAN></SPAN></P>
+<P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">参考值见下，不做翻译：</SPAN></SPAN></P><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">
+<UL class="last simple" 
+style='FONT-SIZE: 14px; MARGIN-BOTTOM: 10px; FONT-FAMILY: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; LETTER-SPACING: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'>
+  <LI><SPAN><CODE class="docutils literal" 
+  style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+  class=pre>IonCannon.Ripple=1</SPAN></CODE></SPAN><SPAN>&nbsp;</SPAN>- Forget it, nothing. 
+  <LI><SPAN><CODE class="docutils literal" 
+  style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+  class=pre>IonCannon.Ripple=5</SPAN></CODE></SPAN><SPAN>&nbsp;</SPAN>- Target cell, only voxel rippling 
+  <LI><SPAN><CODE class="docutils literal" 
+  style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+  class=pre>IonCannon.Ripple=8</SPAN></CODE></SPAN><SPAN>&nbsp;</SPAN>- Target cell, both voxel and SHP rippling. 
+  <LI><SPAN><CODE class="docutils literal" 
+  style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+  class=pre>IonCannon.Ripple=10</SPAN></CODE></SPAN><SPAN>&nbsp;</SPAN>- 1 cell radius 
+  <LI><SPAN><CODE class="docutils literal" 
+  style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+  class=pre>IonCannon.Ripple=15</SPAN></CODE></SPAN><SPAN>&nbsp;</SPAN>- 2 cell radius 
+  <LI><SPAN><CODE class="docutils literal" 
+  style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+  class=pre>IonCannon.Ripple=20</SPAN></CODE></SPAN><SPAN>&nbsp;</SPAN>- 3 cell radius 
+  <LI><SPAN><CODE class="docutils literal" 
+  style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+  class=pre>IonCannon.Ripple=25</SPAN></CODE></SPAN><SPAN>&nbsp;</SPAN>- 3 cell radius 
+  <LI><SPAN><CODE class="docutils literal" 
+  style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+  class=pre>IonCannon.Ripple=28</SPAN></CODE></SPAN><SPAN>&nbsp;</SPAN>- 3 cell unit-rippling, 4 cell terrain 
+  rippling radius 
+  <LI><SPAN><CODE class="docutils literal" 
+  style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+  class=pre>IonCannon.Ripple=30</SPAN></CODE></SPAN><SPAN>&nbsp;</SPAN>and 
+  onwards - 3 cell unit-rippling, 5 cell terrain-rippling 
+radius</LI></UL></SPAN></SPAN></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">
+<P class=p0 style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P class=p0 style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left">
+
+<SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">
+<STRONG >  桥梁破坏者</STRONG></SPAN></P>
+<P class=p0 style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left">
+<SPAN style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'" ><FONT color=#800080 ><STRONG 
+>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>BridgeAbsoluteDestroyer= (boolean)</STRONG></FONT><BR >决定弹头是否能瞬间摧毁桥。需要Wall=yes。[CombatDamage]&gt;IonCannonWarhead默认yes，其他默认no。</SPAN></P><o:p></O:P></SPAN><!--EndFragment--></BODY></HTML>

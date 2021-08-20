@@ -1,0 +1,222 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = "urn:schemas-microsoft-com:office:office"><head>
+<title>新的出兵逻辑</title>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.17267"></HEAD>
+<BODY>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Unit]</STRONG><STRONG>&gt;</STRONG><STRONG>Prerequisite.RequiredTheaters=&nbsp;(list&nbsp;of&nbsp;theater&nbsp;names)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">需要这种气候才能造</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><FONT color=#0000ff><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">TEMPERATE</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;-&nbsp;most&nbsp;maps</SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><FONT color=#0000ff><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">SNOW</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;-&nbsp;arctic/snowy&nbsp;maps</SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><FONT color=#0000ff><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">URBAN</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;-&nbsp;some&nbsp;city&nbsp;maps</SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><FONT color=#0000ff><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">DESERT</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;-&nbsp;some&nbsp;desert&nbsp;maps,&nbsp;older&nbsp;maps&nbsp;use&nbsp;Temperate</SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><FONT color=#0000ff><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">LUNAR</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;-&nbsp;Soviet&nbsp;Mission&nbsp;6</SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><FONT color=#0000ff><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">NEWURBAN</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;-&nbsp;most&nbsp;YR&nbsp;urban&nbsp;maps</SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">PrerequisiteOverride</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">不会覆盖</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">Prerequisite.RequiredTheaters</SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Unit]</STRONG><STRONG>&gt;</STRONG><STRONG>Prerequisite.Negative=&nbsp;(list&nbsp;of&nbsp;BuildingTypes)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">有这个建筑就没法造</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">PrerequisiteOverride</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">不会覆盖</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">Prerequisite.Negative</SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Unit]</STRONG><STRONG>&gt;</STRONG><STRONG>Prerequisite.Lists=&nbsp;(integer)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">指定有多少建造前提</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Unit]</STRONG><STRONG>&gt;</STRONG><STRONG>Prerequisite.List#=&nbsp;(list&nbsp;of&nbsp;BuildingTypes&nbsp;(where&nbsp;#&nbsp;is&nbsp;the&nbsp;1-based&nbsp;index&nbsp;of&nbsp;the&nbsp;prerequisite&nbsp;list,&nbsp;the&nbsp;maximum&nbsp;specified&nbsp;by&nbsp;Prerequisite.Lists))</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">指定新的建造前提，想设置多少都可以（根据</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">Prerequisite.Lists</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">决定）</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>&nbsp;</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Unit]</STRONG><STRONG>&gt;</STRONG><STRONG>Prerequisite.StolenTechs=&nbsp;(list&nbsp;of&nbsp;integers)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">指定有多少偷窃前提，其他具体的参考后面的偷窃科技条目</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>&nbsp;</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>FactoryOwners.Permanent=&nbsp;(boolean)</STRONG></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#ff0000><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><EM>[BuildingType]<FONT color=#ff0000>&gt;</FONT>FactoryOwners.HaveAllPlans=&nbsp;(boolean)</EM></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">占领该建筑后是否获得对应工厂的专用科技，效果为永久（即一旦占领不可撤销），默认否。</SPAN></P><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>FactoryOwners.HasAllPlans=&nbsp;(boolean)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#000000>占领该建筑后是否获得对应工厂的专用科技，效果为临时（即一旦失去建筑则失去科技），默认否。</FONT></SPAN></P></FONT></SPAN>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>FactoryOwners=&nbsp;(list&nbsp;of&nbsp;houses)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">这个列表内国家的工厂可以建造该单位。如果是空的，每个国家都可以建造。此外，玩家至少需要一个在该列表内国家的工厂来建造或者这些国家里至少一个的科技树来建造它。</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>FactoryOwners.Forbidden=&nbsp;(list&nbsp;of&nbsp;houses)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">与上面相反，这个列表内国家的工厂不能建造该单位。</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">注意</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">AI无视建筑上的这两条语句，仅在单位上有效</SPAN></P>
+<P align=left><SPAN></SPAN></P><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: center" 
+class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><IMG src="wpsD1D0.tmp.png">&nbsp;</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><FONT size=3><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'">通用的先决条件组</SPAN><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">你现在能自定义先决条件组就像原来的</SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><FONT color=#008000><STRONG><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">P</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">OWER</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;(PrerequisitePower)</SPAN></STRONG></FONT></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><FONT color=#008000><STRONG><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">FACTORY</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;(PrerequisiteFactory)</SPAN></STRONG></FONT></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><FONT color=#008000><STRONG><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">BARRACKS</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;(PrerequisiteBarracks)</SPAN></STRONG></FONT></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><FONT color=#008000><STRONG><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">R</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">ADAR</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;(PrerequisiteRadar)</SPAN></STRONG></FONT></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><FONT color=#008000><STRONG><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">TECH</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;(PrerequisiteTech)</SPAN></STRONG></FONT></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><FONT color=#008000><STRONG><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-STYLE: italic; mso-spacerun: 'yes'">PROC</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;(PrerequisiteProc&nbsp;and&nbsp;PrerequisiteProcAlternate)</SPAN></STRONG></FONT><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">这些</SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">你需要创建一个新的条目</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">[GenericPrerequisites]</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">然后才能添加先决条件组像</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">GROUPNAME=&nbsp;(list&nbsp;of&nbsp;BuildingTypes)</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#ff0000><STRONG><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">[GenericPrerequisites]</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></STRONG></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#ff0000><STRONG><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">NAVALYARD=GAYARD,NAYARD,YAYARD</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></STRONG></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#ff0000><STRONG><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">etc...</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></STRONG></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">[TechnoType]</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">...</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">Prerequisites=NAVALYARD</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">...</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT size=5><STRONG>   
+非建筑作为建造前提（备用建造前提）<BR></STRONG><       
+             
+           
+         
+/FONT>    类比原版奴隶矿场，其作为机动形态的奴隶矿车时也仍然能够作为建造前提正常提供科技。YR中将SMIN作为PROC的备用建造前提，写在了PrerequisiteProcAternate中。</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">        
+           
+ Ares现在允许为所有的通用先决条件组添加备用建造前提，使用如下代码：</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[General]</STRONG><STRONG>&gt;</STRONG><STRONG>PrerequisiteXAlternate= (list of 
+TechnoTypes)<BR></STRONG><        
+          /FONT> 
+所属方拥有列表中的单位时，也能够当做X作为建造前提。自行将X替换为在通用先决条件组中注册的先决条件，首字母大写，其余小写。</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">例如：上述示例中注册的NAVALYARD，在此处写为Navalyard（Prerequisite<FONT color=#ff0000>Navalyard<        
+          /FONT> 
+Alternate）</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">        
+          
+注意：不要在这里写建筑，效果达不到预期。比如说插件不会被正常读取。</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#ff0000><STRONG></STRONG></FONT></SPAN>&nbsp;</P><!--EndFragment--></BODY></HTML>

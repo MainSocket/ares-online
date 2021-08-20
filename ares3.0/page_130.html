@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.17267"></HEAD>
+<BODY>
+<DIV><FONT color=#ff0000><FONT color=#000000 
+face=微软雅黑>你可以把ini文件拆成好几份然后用这玩意儿整合。</FONT></FONT></DIV>
+<DIV><FONT color=#ff0000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#ff0000 
+face=微软雅黑><STRONG>[#include]</STRONG></FONT></DIV><STRONG><FONT 
+color=#ff0000></FONT></STRONG>
+<DIV><BR><FONT face=微软雅黑>把[#include]建在rulesmd.ini然后这样写：</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#008000 face=微软雅黑>[#include]</FONT></DIV>
+<DIV><FONT color=#008000 
+face=微软雅黑>1=rules_sw.ini<BR>2=rules_vehicles.ini<BR>3=rules_buildings.ini<BR>4=rules_aircraft.ini<BR>5=rules_infantry.ini</FONT></DIV>
+<DIV><BR><FONT 
+face=微软雅黑>如果在rulesmd和rules_infantry都有相同代码，rules_infantry优先使用。</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>子ini文件名怎么写都可以。</FONT></DIV></BODY></HTML>

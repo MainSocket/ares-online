@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.17267"></HEAD>
+<BODY>
+<DIV><FONT face=微软雅黑>Type=GeneticConverter</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>默认值：</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.Range= 
+(float,integer)<BR>如果设定Mutate.Explosion=yes会被无视</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.Damage= 
+(integer)<BR>[SuperWeapon]&#9658;SW.Warhead= (Warhead)<BR>[SuperWeapon]&#9658;SW.Animation= 
+(Animation)<BR>[SuperWeapon]&#9658;SW.AnimationHeight= 
+(integer)<BR>[SuperWeapon]&#9658;SW.Sound= (Sound)<BR>[SuperWeapon]&#9658;SW.AITargeting= 
+(enum)<BR>[SuperWeapon]&#9658;SW.AffectsHouse= (enum)</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.AffectsTarget= (enum)<BR>设定只能影响 land 
+或water 的目标，不能写单位名称，默认all</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>特殊值：</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Mutate.Explosion= 
+(boolean)<BR>如果是，就用damage和warhead造个爆炸，无视其他，否的话就用SW.Warhead杀兵，无视比例和免疫系统。默认[General]&#9658;MutateExplosion</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Mutate.IgnoreCyborg= 
+(boolean)<BR>是否无视电子人Cyborg=yes，Mutate.Explosion=yes则无视。默认no</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Mutate.IgnoreNotHuman= 
+(boolean)<BR>是否影响NotHuman=yes set，如果 Mutate.Explosion=yes无视。默认no</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Mutate.KillNatural= 
+(boolean)<BR>是否直接地杀死Natural=yes，用弹头SW.Warhead。默认yes，在有那啥啥代码的时候被无视</FONT></DIV></BODY></HTML>

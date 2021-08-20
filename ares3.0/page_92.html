@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = "urn:schemas-microsoft-com:office:office"><head>
+<title>通用特殊效果</title>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.17267"></HEAD>
+<BODY>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>增强的弹头目标影响</STRONG></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>AffectsEnemies=&nbsp;(boolean)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">决定这个弹头是否能够影响它发射者的敌人。</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>AffectsOwner= 
+(boolean)</STRONG></FONT> 
+<BR>决定这个弹头是否能够影响它发射者的阵营。你可以用这个设置一个弹头能打自己和敌人，但是对友军无效，也可以设置对友军和敌人有效，但是对自己无效。</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">默认同AffectsAllies</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[Warhead]&gt;EffectsRequireDamage= (bool)</STRONG></FONT> 
+<BR>决定这个弹头是否只会影响被该弹头伤害掉至少一滴血的目标，如果否，则无论是否造成伤害都会有影响。默认no。</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG><FONT color=#800080>[Warhead]&gt;EffectsRequireVerses= (bool)</FONT></STRONG> 
+<BR>决定这个弹头是否只会影响弹头比例大于0的目标，如果否，则无论什么弹头比例都会有影响。默认yes。</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>允许弹头不带伤害</STRONG><BR><STRONG><FONT color=#800080>[Warhead]&gt;AllowZeroDamage= (boolean) 
+<BR></FONT></STRONG>决定0伤害是否会影响到所有的目标，否则不影响。默认否。</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>非恶意弹头</STRONG></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>Malicious=&nbsp;(boolean)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">这个弹头是否会引起伊娃的警告，比如打矿车伊娃也不会说</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">
+<P class=p0 style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>抑制单位死亡信息</STRONG></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080 face=微软雅黑><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>UnitLost.Suppress= 
+(boolean)</STRONG></FONT></P>
+<P class=p0 style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">被这个弹头杀死的单位不会触发EVA警报，不过被打时的提示依然会说，所以视情况请结合非恶意弹头使用。</SPAN></P>
+<P class=p0 style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P class=p0 style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>弹头覆盖DieSound和DieVoice</STRONG><BR><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>DieSound.Override= 
+(soundmd entry)</STRONG></FONT> 
+<BR>当目标被这个弹头击杀时播放这个，单位自己的DieSound将不再使用。使用&lt;none&gt;来回避DieSound。</SPAN></P>
+<P class=p0 style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>VoiceDie.Override= 
+(soundmd entry)</STRONG></FONT> 
+<BR>当目标被这个弹头击杀时的语音，单位自己的VoiceDie将不再使用。使用&lt;none&gt;来回避VoiceDie。</SPAN></P></SPAN>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 15pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>防止散布</STRONG></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>PreventScatter=&nbsp;(boolean)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">是否当用这个弹头攻击单位时不会让单位乱跑。默认否</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0></SPAN><FONT face=微软雅黑><FONT color=#800080><STRONG>   
+</STRONG></FONT></FONT>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT face=微软雅黑><FONT color=#000000><STRONG>   
+声呐弹头</STRONG></FONT></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT face=微软雅黑><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>Sonar.Duration= 
+(integer - frames)</STRONG></FONT><BR>被击中的单位会强制现身这么久。</FONT></P>
+<P><FONT face=微软雅黑><STRONG>武器禁用弹头</STRONG></FONT><FONT face=微软雅黑><BR><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>DisableWeapons.Duration= 
+(integer - frames)</STRONG><BR></FONT>被击中的单位会无法开火这么久，注意，对海豹的C4这类特殊能力无效。</FONT></P>
+<P><FONT face=微软雅黑><FONT color=#000000><STRONG>闪光<BR></STRONG><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>Flash.Duration= 
+(integer - frames)</STRONG> 
+  
+</FONT></FONT><BR>被该弹头击中时会闪烁，就像被治疗的时候那样。在红色警戒里，一个单位被有Charges=yes的武器攻击时也会闪烁。只能用于攻击型弹头，不支持治疗武器。</FONT></P>
+<P><FONT face=微软雅黑><STRONG>核弹闪光<BR></STRONG>NUKE弹头被硬编码为会导致全屏闪光，现在这个效果可以给别的弹头用了，也可以用来把NUKE弹头的闪光给屏蔽掉。<BR><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>NukeFlash.Duration= 
+(integer - frames)</STRONG></FONT><BR>瞎狗眼持续时间。NUKE默认30，其他0</FONT></P>
+<P><FONT face=微软雅黑><STRONG><FONT color=#000000>真实伤害（百分比伤害）</FONT></STRONG><BR><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>RelativeDamage= 
+(boolean)</STRONG> 
+</FONT><BR>是否造成真实伤害，必须要有以下四个语句才有效。<BR><FONT color=#800080><STRONG>[Warhead]&gt;RelativeDamage.Buildings= (integer - 
+percent)<BR>[Warhead]&gt;RelativeDamage.Aircraft= (integer - 
+percent)<BR>[Warhead]&gt;RelativeDamage.Infantry= (integer - 
+percent)<BR>[Warhead]&gt;RelativeDamage.Vehicles= (integer - 
+percent</STRONG><STRONG>   
+)<BR>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>RelativeDamage.Terrain= 
+(integer - percent)</STRONG><BR></FONT>造成的百分比伤害，支持-100到100，正值为最大生命值百分比，负值为当前生命值百分比，0即无效<BR>真实伤害会将Organic=yes的载具视为步兵，ConsideredAircaraft=yes的载具视为空军。</FONT></P>
+<P><FONT face=微软雅黑></FONT><FONT face=微软雅黑>&nbsp;</P></FONT>
+<P><FONT face=微软雅黑>            
+      </FONT>&nbsp;</P></BODY></HTML>

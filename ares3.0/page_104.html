@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 9.00.8112.16599"></HEAD>
+<BODY>
+<DIV><FONT color=#000000 face=微软雅黑>Type=LightningStorm</FONT></DIV>
+<DIV><BR><FONT color=#000000 face=微软雅黑>默认值：</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#000000>[SuperWeapon]&#9658;SW.Range= 
+(float,integer)<BR>雷击范围。默认[General]&#9658;LightningCellSpread</FONT></FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#000000>[SuperWeapon]&#9658;SW.Damage= 
+(integer)<BR>伤害。默认[General]&#9658;LightningDamage</FONT></FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#000000>[SuperWeapon]&#9658;SW.Warhead= 
+(Warhead)<BR>弹头。默认[General]&#9658;LightningWarhead</FONT></FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#000000>[SuperWeapon]&#9658;SW.Deferment= 
+(integer frames)<BR>启动前准备帧数。默认[General]&#9658;LightningDeferment</FONT></FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#000000>[SuperWeapon]&#9658;SW.ActivationSound= 
+(Sound)</FONT><BR>闪电风暴激活声音[AudioVisual]&#9658;StormSound</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.AITargeting= 
+(enum)<BR>AI瞄准模式。默认LightningStorm</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Light.*= (integer)<BR>设定光线效果 
+默认是地图的[Lighting]&#9658;Ion*</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>特殊值:</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.Duration= (integer - 
+frames)<BR>持续时间。默认[General]&#9658;LightningStormDuration，-1是无限长</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.RadarOutage= (integer - 
+frames)<BR>受到SW.AffectsHouse影响的玩家的雷达关闭时间。默认[General]&#9658;LightningStormDuration</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.RadarOutageAffects= 
+(enum)<BR>影响对象。默认enemies</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.HitDelay= (integer - 
+frames)<BR>两个云放电的间隔。默认[General]&#9658;LightningHitDelay</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.ScatterDelay= (integer - 
+frames)<BR>刷出云的间隔。默认[General]&#9658;LightningScatterDelay</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.ScatterCount= 
+(integer)<BR>一次刷云产生的数目。默认Lightning.ScatterDelay ，0或负数导致只有中心雷击</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.Separation= (integer - 
+distance)<BR>两个云之间的最小距离。默认[General]&#9658;LightningSeparation</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.PrintText= 
+(boolean)<BR>是否会出现闪电风暴接近中的CSF。默认[General]&#9658;LightningPrintText</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.IgnoreLightningRod= 
+(boolean)<BR>是否无视建筑避雷针LightningRod=yes。默认no</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.DebrisMin= 
+(integer)<BR>一次最少产生碎片数。默认2</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.DebrisMax= 
+(integer)<BR>最大。默认4</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.CloudHeight= (integer - 
+leptons)<BR>云的高度，小于0的话会把云放在闪电表的第一个闪电上面</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.BoltExplosion= 
+(Animation)<BR>雷击动画。默认 [General]&#9658;WeatherConBoltExplosion</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.Sounds= (list of Sounds)<BR>雷击声音。默认 
+[AudioVisual]&#9658;LightningSounds</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.Clouds= (list of 
+Animation)<BR>云类型，不得缺少。默认[General]&#9658;WeatherConClouds</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.Bolts= (list of 
+Animation)<BR>电类型，可以缺少。默认[General]&#9658;WeatherConBolts</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;Lightning.Debris= (list of 
+Animation)<BR>雷击产生的碎片类型[General]&#9658;MetallicDebris<BR>Bouncer=yes不得用于雷的动画，否则击中建筑立刻IE</FONT></DIV></BODY></HTML>

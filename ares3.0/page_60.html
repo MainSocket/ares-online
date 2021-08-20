@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = "urn:schemas-microsoft-com:office:office"><head>
+<title>实体建筑</title>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 9.00.8112.16599"></HEAD>
+<BODY>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">现在建筑可以设置成具有实际高度特性，意味着有些武器在设定后如果朝建筑后的目标进行攻击，抛射体会被建筑给挡住，如果这个功能被启用，单位会寻找最佳路径，尽量绕过建筑去攻击目标。</SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">坚固程度可以让单位区分这个建筑是否对它意味着坚不可摧，如果超过它的承受能力它会考虑绕过建筑进行攻击。</SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">只有非我军建筑会被单位考虑绕过或直接打击，单位不会通过我方建筑进行直接攻击，开启的门不会被当做攻击的障碍。</SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>对于攻击者的设定</STRONG></SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Projectile]</STRONG><STRONG>&gt;</STRONG><STRONG>SubjectToBuildings=&nbsp;(boolean)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">这个抛射体是否会被建筑阻挡，默认为否</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Projectile]</STRONG><STRONG>&gt;</STRONG><STRONG>SolidLevel= 
+(integer)</STRONG></FONT></DIV>
+<DIV><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">这个抛射体所能承受的坚固程度，如果这个值高于或等于建筑的坚固程度，那么这个单位将会直接对建筑后的目标进行攻击，首先摧毁障碍再说，如果低于建筑的坚固等级，那么就不能开火，必须绕过建筑进行攻击，默认0</SPAN></DIV>
+<DIV><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</DIV>
+<DIV><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><STRONG>对承受者的设定</STRONG></o:p></SPAN></DIV>
+<DIV><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</DIV>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SolidHeight=&nbsp;(integer&nbsp;-&nbsp;cells)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">建筑的阻挡高度，默认为0，即可以完全穿透，-1意味着可以完全阻挡，单位为格，一格等于256像素</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">注意：不建议用在不是矩形或者镂空的建筑上，例如巴黎铁塔这种越往上越尖的建筑，因为炮弹打上去可能表现得像是在半空爆炸</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG></SPAN><STRONG>SolidLevel= 
+(integer)</STRONG> 
+</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">建筑的坚固程度，默认1</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>全局设定</STRONG></SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG></STRONG></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">可以设定是否友军抛射体能够直接透过建筑攻击目标，影射AlliedWallTransparency</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[CombatDamage]</STRONG><STRONG>&gt;</STRONG><STRONG>AlliedSolidTransparency= 
+(boolean)</STRONG></FONT></SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT face=微软雅黑></FONT>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT face=微软雅黑>写yes的话可以透过，默认否</FONT></P></BODY></HTML>

@@ -1,0 +1,747 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = "urn:schemas-microsoft-com:office:office"><head>
+<title>通用设置</title>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 9.00.8112.16599"></HEAD>
+<BODY>
+<DIV><FONT color=#ff0000 face=微软雅黑>禁止在游戏模式ini里修改超武的action和type，要用就用rules，写个新的超武，在游戏模式里重做关联。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>额外的超级武器</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV><FONT face=微软雅黑>在原版里一个建筑只能关联两个超级武器，使用SuperWeapon以及SuperWeapon2，ARES可以让一个建筑关联更多的超级武器。</FONT>
+<DIV>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SuperWeapons= 
+(list of SuperWeaponTypes)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>该建筑关联这些超级武器。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><STRONG>通用语句</STRONG></FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.Range= 
+(float,int)<BR></STRONG></FONT>填一个数，或两个数，前者是圆的半径，后者是矩形的长宽</FONT></DIV>
+<DIV><FONT face=微软雅黑>&nbsp;</DIV></FONT>
+<DIV><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.CreateRadarEvent= 
+(bool)<BR></STRONG></FONT>是否建立雷达事件</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AffectsHouse= (enum 
+none谁都不|owner发出者|allies盟友|team自己和盟友|enemies敌人|all全部)<BR></STRONG></FONT>影响对象，可以设多个</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AffectsTarget= (enum 
+land|water|empty|infantry|units|buildings)<BR></STRONG></FONT>可以作用的地形和对象，可以设多个</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.ShowCameo= 
+(boolean)<BR></STRONG></FONT>是否在防御栏显示此超武，默认是，AutoFire的默认隐藏</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.Deferment= 
+(integer frames)<BR></STRONG></FONT>超武生效前帧数，仅对部分有效</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.TimerVisibility= 
+(enum - owner,allies,team,enemy,others,all,none)</STRONG>   
+</FONT>&nbsp;<BR>当ShowTimer=yes时，哪些玩家可以看见计时器，默认all。</FONT></DIV>
+<DIV><FONT face=微软雅黑><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.InitialReady= 
+(boolean,)</STRONG>    
+</FONT> <BR>决定这个超武是否刚获得时就充能完毕，当发射一次之后，计时恢复正常。默认no</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.VirtualCharge= 
+(boolean)</STRONG>    
+</FONT> <BR>决定这个超武使用虚拟充能</FONT></DIV>
+<DIV><FONT face=微软雅黑>这个逻辑可以用来分开超武充能和建筑存在。如果没有建筑了，计时器会隐藏到后台继续充能，等到所属方再次持有建筑时重新显示图标和计时器。默认no</FONT></DIV>
+<DIV><FONT face=微软雅黑><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.Shots= 
+(integer)</STRONG> 
+</FONT>   
+  
+<BR>决定此超武能够用多少次，-1代表无限。此逻辑暂时不支持持续性超武。默认-1<BR>目前，被升级工具箱或地图触发带来的超武也会共享次数。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><STRONG>定死的值</STRONG></FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.PostDependent= 
+(SuperWeapon)<BR></STRONG></FONT>定义超时空的两个超武链接，例如[ChronoSphereSpecial]<STRONG><FONT color=#000000>&gt;</FONT></STRONG>SW.PostDependent=ChronoWarpSpecial</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><BR><FONT face=微软雅黑><STRONG>释放条件</STRONG></FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.FireIntoShroud= 
+(boolean)<BR></STRONG></FONT>能否丢进黑雾，默认是</FONT></DIV>
+<DIV><FONT face=微软雅黑>  
+   
+</FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.UseAITargeting= 
+(boolean, defaults to no)</STRONG></FONT> 
+<BR>如果是，则人类玩家点击图标时自动发射超武，而不需要手动选择目标。选择目标交给AITargeting。<BR>  
+   
+如果不符合AI瞄准的约束条件，则超武图标会黑掉（约束条件见下），如果超武目前无法依靠AITargeting发射，会反馈一个文本信息给玩家。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AutoFire= 
+(boolean)<BR></STRONG></FONT>自动发出，会丢到效果最好的地方，默认否</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.ManualFire= 
+(boolean)<BR></STRONG></FONT>人工发出，如果autofire=no的话这行代码就没用，有个蛋用</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.RequiresTarget= (enum 
+land|water|empty|infantry|units|buildings)<BR></STRONG></FONT>可以点什么类型的目标，不是此目标的话就不能点下去，比如护盾只能点建筑</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.RequiresHouse= (enum 
+none|owner|allies|team|enemies|all)<BR></STRONG></FONT>是否对敌人盟友之类的生效</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.Group= 
+(integer)</STRONG> </FONT> 
+<BR>设置超武组号，可以在AI脚本中涉及到超级武器的部分指定该组号，默认0。需要搭配SW.AITargeting=IronCurtain使用。<BR></DIV></FONT>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AITargeting=&nbsp;(enum&nbsp;SW&nbsp;Targeting&nbsp;Type)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">AI怎么用</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>None：不会用</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>LightningStorm：侵略性，不能和其他闪电一起</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>Nuke：侵略性或用触发指定</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>PsychicDominator；最大的敌人单位集群</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>GeneticMutator：3X3内最大的敌人步兵集群</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>ParaDrop：敌人家防御最差的地方</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>ForceShield：敌人超武砸的地方</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>NoTarget：随便砸</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>Offensive：侵略性</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>Stealth：只攻击隐形单位，受SW.RequiresTarget和SW.RequiresHouse影响</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>Base：砸自己基地</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>EnemyBase：砸敌人基地</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>HunterSeeker：像</FONT><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>NoTarget一样，但是会打敌人的单位，这个只对一些超武有用</FONT></SPAN></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>IronCurtain: 
+运用55号脚本关联启动，类似原版铁幕。</FONT></SPAN></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>Self：砸这个超武的超武建筑</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>LightningRandom：随机瞄准，仍然读取指示者和抑制者</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>Attack：类似于NoTarget，但是会在所属方被攻击时启动（类似于自卫）</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>LowPower：类似于NoTarget，但是会在所属方处于低电力时启动</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>LowPowerAttack：把上面那两个结合在一起</FONT></SPAN></P>
+<P><FONT color=#000000 face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]&gt;SW.AIRequiresTarget= (enumeration 
+none|land|water|empty|infantry|units|buildings|all)</STRONG></FONT><BR> 
+            
+          
+     AI版RequiresTarget，默认值见下表。<BR><FONT color=#800080><STRONG>[SuperWeapon]&gt;SW.AIRequiresHouse= (enumeration 
+owner|allies|team|enemies|others|all)</STRONG></FONT><BR>   
+            
+            
+ AI版RequiesHouse，默认值见下表。</FONT></P>
+<P><FONT color=#000000 face=微软雅黑><STRONG>SW.AITargeting优先级</STRONG><BR>   
+            
+            
+ 此设定将会改变超级武器的默认发射格。当然，这是给地图触发用的。</FONT></P>
+<P><FONT color=#000000 face=微软雅黑><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AITargeting.Preference= 
+(SW targeting preference)</STRONG></FONT> 
+<BR>决定此超武会偏向于发射在哪个，由地图触发行为设定的格，默认取决于Type=. <BR>有效值为： 
+<BR>"none":无偏向<BR>"offensive": 
+偏向于由地图触发行为设定的侵略性格子。135号行为设定这种格子，136号行为移除这种格子<BR>"defensive":   
+            
+            
+ 偏向于由地图触发行为设定的防御性格子。</FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#000000><STRONG>SW.AITargeting约束条件</STRONG><BR>约束条件，即超级武器的发射所需环境。他们中有些是人为的(比如，即使AI没有选定敌人，搜猎者也可以发射，这说不过去), 
+有些是客观的(如果优先级最高的敌人基地成为了目标，但是AI还没有选择任何目标，那么就没有可以发射的地点).</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#000000>如果没有适宜的约束条件，那么超武的图标会成为灰色（仅限于使用AITargeting时）。如果在约束条件的范围内超武找不到可以发射的目标，那么玩家会得到一条发射失败的文字回馈。</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#000000><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AITargeting.Constraints= 
+(SW targeting constraints)</STRONG>   
+</FONT> <BR>填此超武所需的发射约束环境，多个约束条件用逗号隔开。默认取决于Type=. 
+<BR>有效值为：</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#000000>"none":没有约束条件<BR>"offensive_cell_clear":地图触发行为135没有设定侵略性格子时<BR>"defensive_cell_clear":地图触发行为140没有设定防御性格子时<BR>"offensive_cell_set":直到地图触发行为135设定了侵略性格子时<BR>"defensive_cell_set":直到地图触发行为140设定了防御性格子时<BR>"enemy":当发射方已经选定了一个所属方为敌人时<BR>"lightningstorm_inactive":当没有任何闪电风暴处于发射状态时<BR>"dominator_inactive":当没有任何心灵控制处于发射状态时<BR>"attacked":当发射方被攻击时<BR>"lowpower":当发射方处于低电力状态时</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#000000><FONT color=#ff0000>以下约束环境对玩家无效</FONT>：<BR>"lightningstorm_inactive"，因为玩家会在闪电风暴激活时得到一条发射失败的回馈信息<BR>"dominator_inactive"，因为玩家会在心灵控制激活时得到一条发射失败的回馈信息<BR>"attacked"，因为这是辅助AI使用的，玩家能够正确的判别何时应该发设<BR>"lowpower"，同上</FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff></FONT></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#0000ff>默认值表：</FONT></SPAN></P><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0>
+<TABLE class=docutils 
+style='FONT-SIZE: 14px; BORDER-TOP: 0px; FONT-FAMILY: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif; BORDER-RIGHT: 0px; WHITE-SPACE: normal; WORD-SPACING: 0px; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; BORDER-LEFT: 0px; ORPHANS: 2; WIDOWS: 2; MARGIN: 0px -0.5em; LETTER-SPACING: 0px; BACKGROUND-COLOR: rgb(255,255,255); -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial' 
+border=1>
+  <COLGROUP>
+  <COL width="14%">
+  <COL width="19%">
+  <COL width="14%">
+  <COL width="30%">
+  <COL width="17%">
+  <COL width="6%"></COLGROUP>
+  <THEAD vAlign=bottom>
+  <TR class=row-odd>
+    <TH class=head 
+    style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"><SPAN><CODE 
+      class="docutils literal" 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+      class=pre>SW.AITargeting</SPAN></CODE></SPAN></TH>
+    <TH class=head 
+    style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"><SPAN><CODE 
+      class="docutils literal" 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+      class=pre>SW.AIRequiresTarget</SPAN></CODE></SPAN></TH>
+    <TH class=head 
+    style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"><SPAN><CODE 
+      class="docutils literal" 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+      class=pre>SW.AIRequiresHouse</SPAN></CODE></SPAN></TH>
+    <TH class=head 
+    style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"><SPAN><CODE 
+      class="docutils literal" 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+      class=pre>SW.AITargeting.Constraints</SPAN></CODE></SPAN></TH>
+    <TH class=head 
+    style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"><SPAN><CODE 
+      class="docutils literal" 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)'><SPAN 
+      class=pre>SW.AITargeting.Preference</SPAN></CODE></SPAN></TH>
+    <TH class=head 
+    style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px">Extras</TH></TR></THEAD>
+  <TBODY vAlign=top>
+  <TR class=row-even>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>None</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >N/A</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >N/A</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >N/A</TD></TR>
+  <TR class=row-odd>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>Nuke</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>infantry,units,buildings</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>enemies</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>enemy</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>offensive</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR>
+  <TR class=row-even>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>LightningStorm</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>infantry,units,buildings</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>enemies</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>enemy,lightningstorm_inactive</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>offensive</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR>
+  <TR class=row-odd>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>PsychicDominator</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>infantry,units</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>all</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>enemy,dominator_inactive,offensive_cell_clear</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR>
+  <TR class=row-even>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>GeneticMutator</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>infantry</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>all</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>offensive_cell_clear</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR>
+  <TR class=row-odd>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>IronCurtain</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >do 
+      not use</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >do 
+      not use</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >no</TD></TR>
+  <TR class=row-even>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>ForceShield</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >do 
+      not use</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >do 
+      not use</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>defensive</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR>
+  <TR class=row-odd>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>ParaDrop</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >do 
+      not use</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >do 
+      not use</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>offensive</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR>
+  <TR class=row-even>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>DropPod</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >do 
+      not use</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >do 
+      not use</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>enemy</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR>
+  <TR class=row-odd>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>Offensive</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>infantry,units,buildings</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>enemies</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>enemy</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR>
+  <TR class=row-even>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>MultiMissile</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>buildings</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>enemy</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>offensive</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR>
+  <TR class=row-odd>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>HunterSeeker</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >N/A</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >N/A</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>enemy</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >N/A</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >no</TD></TR>
+  <TR class=row-even>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>NoTarget</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >N/A</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >N/A</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >N/A</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >no</TD></TR>
+  <TR class=row-odd>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>Stealth</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>infantry,units,buildings</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>enemies</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR>
+  <TR class=row-even>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>Self</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE>1)</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >do 
+      not use</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR>
+  <TR class=row-odd>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>Base</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >do 
+      not use</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >do 
+      not use</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR>
+  <TR class=row-even>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>EnemyBase</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >do 
+      not use</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >do 
+      not use</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>enemy</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR>
+  <TR class=row-odd>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>LightningRandom</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >N/A</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >N/A</TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    ><CITE 
+      style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>none</CITE></TD>
+    <TD                                                                                                                                                                                                                                                                         style="BORDER-LEFT-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px; BORDER-TOP-COLOR: ; BORDER-BOTTOM: rgb(170,170,170) 1px solid; BORDER-LEFT-COLOR: ; PADDING-BOTTOM: 1px; TEXT-ALIGN: left; PADDING-TOP: 1px; PADDING-LEFT: 5px; BORDER-RIGHT-COLOR: ; PADDING-RIGHT: 8px; BORDER-TOP-WIDTH: 0px"    >yes</TD></TR></TBODY></TABLE></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>范围限制</STRONG></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>可以设置超武的射程，以超武建筑为中心，超过其发射范围就不能发射超武。</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><FONT color=#800080><STRONG>[SuperWeapon]&gt;SW.RangeMaximum= (float - cell 
+range)<BR>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.RangeMinimum= (float - cell 
+range)<BR></STRONG></FONT>最大范围和最小范围，负数即无限。默认-1，随便打</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><STRONG><FONT face=微软雅黑>指示者</FONT></STRONG></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>以下标签设置单位为指示者，超武只能在指示者的范围内发射。</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.Designators= (list of 
+TechnoTypes)<BR></STRONG></FONT>需要这些单位作为指示者，不写就是不需要</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AnyDesignator= 
+(boolean)<BR></STRONG></FONT>是否任何单位都能做指示者，覆盖SW.Designators。默认否</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>DesignatorRange= (integer - 
+cells)<BR></STRONG></FONT>指示者的指示范围。默认和[TechnoType]<STRONG><FONT color=#000000>&gt;</FONT></STRONG>Sight一样</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><STRONG>抑制者</STRONG></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>和<SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>抑制者</o:p></SPAN>相反，超武不能在这些单位周围发射。</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>另外如果建筑作为<SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>抑制者</o:p></SPAN>没电，没有被占领的话，那么<SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>抑制</o:p></SPAN>功能就会无效。</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.Inhibitors= 
+(list of TechnoTypes)</STRONG>   
+</FONT><BR>需要这些单位作为抑制者。</o:p></SPAN></P><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AnyInhibitor= 
+(boolean)</STRONG></FONT><BR>是否任何单位都能做抑制者，覆盖上面那个。</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>InhibitorRange= 
+(integer - cells)</STRONG></FONT><BR>抑制者的抑制范围。</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><STRONG>阵营国家限制</STRONG></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">现在可以设定超武的归属国家，如果另一个国家占领了这个国家的超武建筑，超武也不能够被占领国家使用。</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.RequiredHouses= 
+(list of HouseTypes)</STRONG>   
+</FONT> <BR>这个超武归属于那个国家。</SPAN></o:p></SPAN></P><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.ForbiddenHouses= 
+(list of HouseTypes)</STRONG></FONT> <BR>哪些国家不能用这个超武。</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><STRONG>玩家限制</STRONG></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0>如果所属方不能使用超武，则既不会显示图标也不会显示倒计时</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AllowPlayer= 
+(boolean)</STRONG> 
+</FONT> <BR>决定这个超武是否为玩家所有，默认yes</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AllowAI= 
+(boolean)</STRONG> 
+</FONT> <BR>决定这个超武是否为AI所有，默认yes</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><STRONG>辅助建筑</STRONG></SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">在TS里NOD有一个叫化学飞弹的超武，这个超武必须要有另一个非超武建筑化学工厂（介绍是化学工厂生产化学飞弹）才能使用，化学工厂被称为辅助建筑，这个逻辑在ARES里得到了复原。</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AuxBuildings= 
+(list of BuildingTypes)</STRONG></FONT></SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">这个超武需要这些建筑存在时才能使用。</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.NegBuildings= 
+(list of BuildingTypes)</STRONG></FONT></SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">这个超武在有这些建筑存在时不能使用。</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><STRONG>无源超武</STRONG></SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><STRONG><FONT color=#800080>[</FONT></STRONG><FONT face=微软雅黑><FONT color=#800080><STRONG>SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AlwaysGranted= 
+(boolean)</STRONG></FONT> <BR>决定此超武是否不需要建筑，直接出现。仍然遵循AuxBuilding, SW.AuxBuidings, 
+SW.NegBuildings, SW.ForbiddenHouses, SW.RequiredHouses, 
+SW.AllowPlayer和SW.AllowAI。默认no</FONT></SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><STRONG>新增鼠标</STRONG></SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">具体可以看鼠标指针</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Cursor= (cursor 
+definition)<BR></STRONG></FONT></SPAN></o:p></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">可以释放时的鼠标，默认攻击鼠标指针</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>NoCursor= (cursor 
+definition)<BR></STRONG></FONT>不能释放时的鼠标，默认禁止鼠标指针</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><STRONG>长期生效超武</STRONG></SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">超武需要设置UseChargeDrain=yes</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.ChargeToDrainRatio= (float 
+multiplier)<BR></STRONG></FONT>此超武有效时间，默认为[General]<STRONG><FONT color=#000000>&gt;</FONT></STRONG>ChargeToDrainRatio</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.Unstoppable= 
+(boolean)<BR></STRONG></FONT>是否禁止手工停止，注意这个功能简直就是火风暴专用，用于别的超武会发生不可预期的效果</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><STRONG>花费</STRONG></SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Money.Amount= (integer - 
+credits)<BR></STRONG></FONT>超武开火时加钱，负数扣钱，默认0</SPAN></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Money.DrainAmount= (integer - 
+credits)<BR></STRONG></FONT>火风暴扣钱，默认0</SPAN></o:p></SPAN></P><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Money.DrainDelay= 
+(integer - frames)<BR></STRONG></FONT>火风暴扣钱间隔</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><STRONG>动画/音效</STRONG></P><STRONG></STRONG>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.Animation= 
+(animation)<BR></STRONG></FONT>目标地点的动画</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AnimationHeight= 
+(integer)<BR></STRONG></FONT>动画高度</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.AnimationVisibility= 
+(enumeration none|owner|allies|team|enemies|all)<BR></STRONG></FONT>谁能看见动画</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.Sound= 
+(sound)<BR></STRONG></FONT>目标地点的声音</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>SW.ActivationSound= 
+(sound)<BR></STRONG></FONT>超武成功触发的声音，如闪电风暴</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><STRONG>EVA事件</STRONG></P><STRONG></STRONG>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>EVA.Detected= (EVA 
+event)<BR></STRONG></FONT>超武建筑建造</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>EVA.Ready= (EVA 
+event)<BR></STRONG></FONT>就绪</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>EVA.Activated= (EVA 
+event)<BR></STRONG></FONT>启动</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>EVA.Impatient= (EVA 
+event)<BR></STRONG></FONT>超武还不能释放</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>EVA.InsufficientFunds= 
+(EVA event)<BR></STRONG></FONT>钱不够，默认EVA_InsufficientFunds</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>EVA.SelectTarget= (EVA 
+event)<BR></STRONG></FONT>点超武图标时</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0>不想用就写none。</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><STRONG>信息提示（CSF）</STRONG></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Message.Detected= (CSF 
+label)<BR></STRONG></FONT>探测到</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Message.Ready= (CSF 
+label)<BR></STRONG></FONT>就绪</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Message.Launch= (CSF 
+label)<BR></STRONG></FONT>发动</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Message.Activate= (CSF 
+label)<BR></STRONG></FONT>某超武产生效果，如闪电风暴</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Message.Abort= (CSF 
+label)<BR></STRONG></FONT>同类超舞已发动</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Message.InsufficientFunds= (CSF 
+label)<BR></STRONG></FONT>钱不够</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Message.FirerColor= 
+(boolean)<BR></STRONG></FONT>是否用玩家色显示信息，默认否</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Message.Color= (Color 
+scheme)<BR></STRONG></FONT>指定颜色，比Message.FirerColor=yes 权限低</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0> &nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Message.CannotFire= 
+(CSF label)</STRONG></FONT><BR>当玩家依靠AITargeting发射超武失败时，显示此信息。默认<FONT color=#800080>MSG:CannotFire</FONT> </P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><STRONG>图标文本设定</STRONG></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><STRONG></STRONG><BR>显示超舞状态的CSF。</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><STRONG></STRONG></FONT>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Text.Hold= (CSF 
+label)<BR></STRONG></FONT>没电</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Text.Ready= (CSF 
+label)<BR></STRONG></FONT>就绪</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Text.Charging= (CSF 
+label)<BR></STRONG></FONT>火风暴，尚未充能完毕</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Text.Active= (CSF 
+label)<BR></STRONG></FONT>火风暴，已激活</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Text.Preparing= (CSF 
+label)<BR></STRONG></FONT>准备中</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><STRONG>超级武器全局光</STRONG></P><STRONG></STRONG>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Light.Enabled= 
+(boolean)<BR></STRONG></FONT>是否引起全局光改变，只支持第一超武</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Light.Ambient= 
+(integer)<BR></STRONG></FONT>环境亮度，太高会卡</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><BR><FONT color=#800080><STRONG>[SuperWeapon]&gt;Light.Red= 
+(integer)<BR>[SuperWeapon]&gt;Light.Green= (integer)<BR>[SuperWeapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Light.Blue= 
+(integer)<BR></STRONG></FONT>颜色，一群蛋疼的家伙居然没有把RGB合成一个标签</SPAN></P></o:p></SPAN></BODY></HTML>

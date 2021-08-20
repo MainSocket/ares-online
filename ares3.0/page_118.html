@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><head>
+<title>狩猎者</title>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 9.00.8112.16599"></HEAD>
+<BODY>
+<DIV><FONT face=微软雅黑>Type=HunterSeeker 狩猎者</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>狩猎者超武是从TS里恢复过来的，这个超武启动时会从建筑飞出一个单位，把地图上任意东西撞爆，可能是步兵，可能是载具，也可能是建筑，如果把基地撞爆就搞笑了，总之是个很蛋疼的超武。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>译者注：HunterSeeker必需是个载具类的单位而不是飞机类的单位，此外，经过测试，该单位的主武器将会作为撞击的武器，这点将使该超武变得更可控。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>默认值：</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?SW.MaxCount= (integer)</FONT></DIV>
+<DIV><FONT face=微软雅黑>当拥有多个发射建筑时，一次能够发射最多几个狩猎者，例如设置为5时即使你有10座发射建筑，一次也只能发射最多5个，低于5个发射建筑还是以发射建筑数量为准发射相同数量的狩猎者。默认为1</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?SW.AITargeting= (enum)</FONT></DIV>
+<DIV><FONT face=微软雅黑>默认无目标</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?SW.AffectsHouse= (enum)</FONT></DIV>
+<DIV><FONT face=微软雅黑>默认敌人</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?SW.AffectsTarget= (enum)</FONT></DIV>
+<DIV><FONT face=微软雅黑>默认全部</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?EVA.Detected= (EVA event)</FONT></DIV>
+<DIV><FONT face=微软雅黑>默认EVA_HunterSeekerDetected</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?EVA.Ready= (EVA event)</FONT></DIV>
+<DIV><FONT face=微软雅黑>默认EVA_HunterSeekerReady</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?EVA.Activated= (EVA event)</FONT></DIV>
+<DIV><FONT face=微软雅黑>默认EVA_HunterSeekerLaunched</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?Text.Ready= (CSF label)</FONT></DIV>
+<DIV><FONT face=微软雅黑>默认TXT_RELEASE</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>特殊值：</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?HunterSeeker.Buildings= (list of 
+BuildingType)</FONT></DIV>
+<DIV><FONT face=微软雅黑>能够发出狩猎者的建筑，可以不是挂载超武的建筑，如果没有建筑可以发出的话那么狩猎者无法发出且超武不会重新计时。默认[SpecialWeapons]?HSBuilding</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?HunterSeeker.Type= (VehicleType)</FONT></DIV>
+<DIV><FONT face=微软雅黑>释放出去的单位，覆盖默认值。默认是这个阵营的HunterSeeker（在新增阵营板块）</FONT></DIV>
+<DIV><FONT face=微软雅黑>被释放出来的单位如果带有Harvester=yes则会自动进入采矿任务</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?HunterSeeker.RandomOnly= 
+(boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否所有敌人单位都能成为狩猎者的目标，如果不是, 非平民目标会成为多人游戏中玩家的首选，如果没有首选目标， 
+那么就会选择一个随机的目标进行攻击。默认否</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>如何设置狩猎者和攻击目标请去阵营与国家看。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>关于狩猎者</FONT></DIV>
+<DIV><FONT face=微软雅黑>狩猎者在TS里是一种飞行类单位并且有HunterSeeker=yes的设置，它由狩猎者超武发出，具体的请去ModEnc查看。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SpecialWeapons]?HSBuilding= (list of 
+BuildingTypes)</FONT></DIV>
+<DIV><FONT face=微软雅黑>能够发出狩猎者的建筑，不一定必须是挂载狩猎者超武的建筑。默认none, 
+TS使用的是GAPLUG，NATMPL</FONT></DIV>
+<DIV>&nbsp;</DIV></BODY></HTML>

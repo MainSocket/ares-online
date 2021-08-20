@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><head>
+<title>空间传送</title>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.17267"></HEAD>
+<BODY>
+<DIV><FONT face=微软雅黑>Type=ChronoSphere</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>超时空需要 ChronoWarp以生效</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>默认值：</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?SW.Range= (float,integer)</FONT></DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?SW.Animation= (Animation)</FONT></DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?SW.AnimationHeight= (integer)</FONT></DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?SW.AITargeting= (enum)</FONT></DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?SW.AffectsHouse= (enum)</FONT></DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?SW.AffectsTarget= (enum)</FONT></DIV>
+<DIV><FONT face=微软雅黑>废话不说了，默认值自己看原版</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?SW.PostDependent= (super weapon)</FONT></DIV>
+<DIV><FONT face=微软雅黑>超时空的副超武，默认超舞列表的第一个ChronoWarp类</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>特殊值：</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?Chronosphere.BlastSrc= 
+(Animation)</FONT></DIV>
+<DIV><FONT face=微软雅黑>起始点动画。默认[General]?ChronoBlast</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?Chronosphere.BlastDest= 
+(Animation)</FONT></DIV>
+<DIV><FONT face=微软雅黑>目标点动画。默认[General]?ChronoBlastDest</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?Chronosphere.ReconsiderBuildings= 
+(boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否移动车辆变成的建筑。默认移动</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?Chronosphere.KillOrganic= 
+(boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否杀兵。默认yes，no的话步兵也可超时空</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?Chronosphere.KillTeleporters= 
+(boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否杀Teleporter=yes的单位。默认no</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?Chronosphere.KillCargo= (boolean) 
+<BR>当单位被超时空时，击杀内部的乘员/驻兵。默认no</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?Chronosphere.AffectsIronCurtain= 
+(boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否可以移动铁幕单位。默认no</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?Chronosphere.AffectsUnwarpable= 
+(boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否受Warpable=no影响。默认yes</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?Chronosphere.AffectsUndeployable= 
+(boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否影响可以打包的建筑，如果yes,建筑会像车辆一样找最近的空地着陆。默认no</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]?Chronosphere.BlowUnplaceable= 
+(boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否摧毁超时空失败的建筑。默认yes</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>现在可以直接移动一般建筑，其他规则同上。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>这里还是有问题，超时空的机场不允许生产飞机，探照灯会留在原地。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>Type=ChronoWarp</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>这个超武一切参数只有AI瞄准，鼠标动作和圆圈大小有效，因为是个承载性质的超武。</FONT></DIV>
+<DIV>&nbsp;</DIV></BODY></HTML>

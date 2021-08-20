@@ -1,0 +1,205 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = "urn:schemas-microsoft-com:office:office"><head>
+<title>间谍渗透功能强化</title>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.17267"></HEAD>
+<BODY>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" 
+class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.Custom=&nbsp;(boolean)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">该建筑能否渗透</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'">雷达</SPAN><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.ResetRadar=&nbsp;(boolean)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">是否是雷达，被黑后黑掉地图</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.RevealRadar=&nbsp;(boolean)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">是否把敌人的地图给你</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.KeepRadar=&nbsp;(boolean)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">如果启用那么会一直持续效果</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'">电力</SPAN><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.PowerOutageDuration=&nbsp;(integer&nbsp;-&nbsp;frames)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">停电时间</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>&nbsp;</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'">钱</SPAN><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.StolenMoneyAmount=&nbsp;(integer&nbsp;-&nbsp;credits)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">固定偷多少钱</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.StolenMoneyPercentage=&nbsp;(float&nbsp;-&nbsp;multiplier)</STRONG></FONT></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">偷钱百分比</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">两者同时定义时，效果为偷取百分之多少的钱，最多不超过多少。比如75%，10000，那么将偷取敌方75%当前资金，但最多只能偷到10000钱</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'">超级武器</SPAN><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.ResetSuperweapons=&nbsp;(boolean)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">重新计时</SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.SuperWeapon= 
+(SuperWeaponType)<BR></STRONG></FONT>获得一次该超武使用权</SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">注意：不是所有超武都支持</SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.SuperWeaponPermanent= 
+(boolean)<BR></STRONG></FONT>永久使用权，需要上面语句。默认no</SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'">偷窃科技</SPAN><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.StolenTechIndex=&nbsp;(integer)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">这个建筑的偷窃项（</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">0-31）</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>Prerequisite.StolenTechs=&nbsp;(list&nbsp;of&nbsp;integers)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">这个单位需要偷窃这个偷窃具有某个偷窃项的建筑才能被偷出来（</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">0-31），可以多指定几个</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>&nbsp;</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">比如你要弄一个超空间尤里，需要偷窃尤里兵营和盟军机场，那么就可以给兵营的偷窃项设置1，机场设置2，然后超空间尤里设置1,2，这样超空间尤里就必须偷了以上两个建筑才能建造。</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">如果你给</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">[GATECH],&nbsp;[NATECH]</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">或者</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">[YATECH]</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">（总之就是三方高科）设置了</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">SpyEffect.Custom=yes</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">，</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">那么旧的偷窃语句就不再适用。</SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'">生产设施</SPAN><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.UnitVeterancy=&nbsp;(boolean)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">是否偷窃后能让同类单位出厂老兵</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">只支持步兵和载具</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>&nbsp;[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.InfantryVeterancy= 
+(boolean)</STRONG></FONT>&nbsp; 
+<BR>&nbsp;当这个建筑被渗透时，Trainable=yes的步兵初始一级。需要SpyEffect.Custom=yes. 默认no</SPAN>。</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>&nbsp;[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.VehicleVeterancy= 
+(boolean)</STRONG></FONT> <BR>&nbsp;当这个建筑被渗透时，Trainable=yes的载具初始一级。需要SpyEffect.Custom=yes. 
+默认no。</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;<FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.NavalVeterancy= 
+(boolean)</STRONG>  
+       </FONT>   
+ 
+&nbsp;</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY:  
+  '微软雅黑';  mso-spacerun:   'yes'">&nbsp;当这个建筑被渗透时，Trainable=yes的海军初始一级。需要SpyEffect.Custom=   
+yes. 
+默认no。</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;<FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.AircraftVeterancy= 
+(boolean)&nbsp;</STRONG></FONT>  
+   <BR>&nbsp;当这个建筑被渗透时，Trainable=yes的飞机初始一级。需要SpyEffect.Custom=    yes. 
+默认no。</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">&nbsp;<FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.BuildingVeterancy= 
+(boolean)</STRONG></FONT>  
+  &nbsp; <BR> &nbsp;当这个建筑被渗透时，Trainable=yes的建筑初始一级。需要SpyEffect.Custom=    yes. 
+默认no。</SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>&nbsp;</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.RevealProduction=&nbsp;(boolean)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">是否可以看到对方在造什么，就像下面那张图</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><IMG src="production_spying.png"></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT face=微软雅黑><STRONG>不同建筑的特殊效果</STRONG></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT face=微软雅黑></FONT>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT face=微软雅黑>Fake=yes 显示TXT_FAKE并且在工具条显示真实名称</FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt; TEXT-ALIGN: left" class=p0><FONT face=微软雅黑>Power 显示电力，格式为TXT_POWER_DRAIN2<BR>Storage 
+显示现金，格式为TXT_MONEY_FORMAT_1<BR>Factory&nbsp;显示图标</FONT>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'">逆向工程</SPAN><SPAN 
+style="FONT-SIZE: 18pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">取消掉对面所有的逆向工程单位，具体参考逆向工程逻辑条目</SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG><FONT size=5>建筑破坏</FONT></STRONG></SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.SabotageDelay= 
+(integer - frames)</STRONG></FONT> 
+<BR>设置当该建筑被渗透时，过指定帧数后爆炸（就像被安了C4一样）。如果设定负值，则读取[CombatDamage]?C4Delay，设定0将取消这个功能。默认0。</SPAN></P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"></SPAN>&nbsp;</P>
+<P style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT size=5><STRONG>空效果</STRONG></FONT><BR><FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>SpyEffect.Nothing= 
+(boolean)</STRONG> </FONT> 
+<BR>当这个建筑被渗透时，什么也不会发生。需要SpyEffect.Custom=yes，且需要没有其他SpyEffect设定。默认no。</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P><!--EndFragment--></BODY></HTML>

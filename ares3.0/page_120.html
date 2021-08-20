@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.17267"></HEAD>
+<BODY>
+<DIV><FONT face=微软雅黑>Type=EMPulse</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>这个超武是从TS里移植的，有点类似于一般武器，不但有攻击范围，还有各种和一般武器类似的特性。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>默认值：</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.RangeMinimum= (float - cell 
+range)<BR>攻击最小范围。默认0</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.RangeMaximum= (float - cell 
+range)<BR>最大范围。默认-1，无限大</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.MaxCount= 
+(integer)<BR>发射武器的最大数量，负数即有无限发。默认1</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.AITargeting= 
+(enum)<BR>默认AI不会用</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>特殊值：</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;EMPulse.Cannons= (list of 
+BuildingType)<BR>指定这个建筑作为EMP炮的发射器，如果不设定，所有EMPulseCannon=yes的建筑都会被认定为发射器，需要注意，使用EMP炮的所有建筑都必须设置主武器。默认none</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;EMPulse.TargetSelf= 
+(boolean)<BR>是否打自己，和死亡武器很类似，如果要成功发射，必须设置DamageSelf=yes，卧槽什么蛋疼功能。默认否</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;EMPulse.Linked= 
+(boolean)<BR>是否当仅一门炮需要满足发射范围，其他炮是否满足发射范围也无所谓，只有在SW.MaxCount超过1时才会表现出来，区别在于这门炮可以只作为指示者，不必要参与开火。默认否</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;EMPulse.PulseBall= 
+(Animation)<BR>发射武器前在炮口FLH位置表现的准备动画，写none可以禁用。默认PULSBALL</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>[SuperWeapon]&#9658;EMPulse.PulseDelay= (integer - 
+frames)<BR>发射前的延迟，默认32。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT 
+face=微软雅黑>发射表现为EMP炮瞄准目标，炮口产生准备动画，然后发射出一个炮弹打击指定地点，该建筑实际上没有真正地开火，武器的效果也是无效的。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT 
+face=微软雅黑>如果EMPulse.TargetSelf=yes，一个炮弹会立即引爆在所有EMP炮的位置，当然，这些建筑实际上也没有真正地开火。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT 
+face=微软雅黑>如果建筑有EMPulseCannon=no被放进EMPulse.Cannons，这个建筑会很正常地发射它的主武器，不需要充能和检测发射范围。</FONT></DIV></BODY></HTML>

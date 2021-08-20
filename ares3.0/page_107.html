@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.17267"></HEAD>
+<BODY>
+<DIV><FONT face=微软雅黑>Type=PsychicDominator</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>默认值：</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.Range= (float,integer)</FONT></DIV>
+<DIV><FONT face=微软雅黑>控制范围。默认为[General]&#9658;DominatorCaptureRange</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.Damage= (integer)</FONT></DIV>
+<DIV><FONT face=微软雅黑>控制前伤害，负数是没伤害。默认[General]&#9658;DominatorDamage</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.Warhead= (Warhead)</FONT></DIV>
+<DIV><FONT face=微软雅黑>伤害弹头。默认[General]&#9658;DominatorWarhead</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.Deferment= (integer - frames)</FONT></DIV>
+<DIV><FONT face=微软雅黑>启动之前的延时。默认0</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.ActivationSound= (Sound)</FONT></DIV>
+<DIV><FONT 
+face=微软雅黑>启动声音。默认[AudioVisual]&#9658;PsychicDominatorActivateSound</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.AITargeting= (enum)</FONT></DIV>
+<DIV><FONT face=微软雅黑>瞄准模式。默认PsychicDominator</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.AffectsHouse= (enum)</FONT></DIV>
+<DIV><FONT face=微软雅黑>影响对象。默认all</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.AffectsTarget= (enum)</FONT></DIV>
+<DIV><FONT face=微软雅黑>控制对象。默认infantry，units</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Light.*= (integer)</FONT></DIV>
+<DIV><FONT face=微软雅黑>颜色，默认是 [Lighting]&#9658;Dominator*Psychic</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>特殊值:</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Dominator.FirstAnim= (Animation)</FONT></DIV>
+<DIV><FONT face=微软雅黑>尤里的大头动画。默认[General]&#9658;DominatorFirstAnim</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Dominator.FirstAnimHeight= (integer - 
+leptons)</FONT></DIV>
+<DIV><FONT face=微软雅黑>大头高度。默认750</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Dominator.SecondAnim= 
+(Animation)</FONT></DIV>
+<DIV><FONT face=微软雅黑>生效时候的动画。默认 [General]&#9658;DominatorSecondAnim</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Dominator.SecondAnimHeight= (integer - 
+leptons)</FONT></DIV>
+<DIV><FONT face=微软雅黑>生效动画高度。默认0</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Dominator.FireAtPercentage= 
+(integer)</FONT></DIV>
+<DIV><FONT 
+face=微软雅黑>写整数。表示在这个百分比的大头动画播放完毕时候控制生效，默认[General]&#9658;DominatorFireAtPercentage</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Dominator.ControlAnim= 
+(Animation)</FONT></DIV>
+<DIV><FONT 
+face=微软雅黑>被控制的单位头上的圆圈。默认[CombatDamage]&#9658;PermaControlledAnimationType</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Dominator.Capture= (boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否可以控制。默认可以</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Dominator.Ripple= (boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否使用波纹效果</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Dominator.CaptureMindControlled= 
+(boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否可以控制已经被控制的单位。默认是</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Dominator.CapturePermaMindControlled= 
+(boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否控制已经被控制器永久控制的单位。默认是</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Dominator.CaptureImmuneToPsionics= 
+(boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否可以强行控制免疫的单位。默认否</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;Dominator.PermanentCapture= 
+(boolean)</FONT></DIV>
+<DIV><FONT face=微软雅黑>是否永久。默认是，不得再控制回去</FONT></DIV></BODY></HTML>

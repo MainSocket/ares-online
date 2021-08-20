@@ -1,0 +1,285 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = "urn:schemas-microsoft-com:office:office"><head>
+<title>新增阵营</title>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 9.00.8112.16599"></HEAD>
+<BODY>
+<DIV><FONT color=#000000 face=微软雅黑>注册表为[Sides]</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>可以无限阵营，但是只有16个国家可以正常</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>每个阵营都必须设定以下内容</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑><STRONG>生还者，驾驶员，以及其他</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>DefaultDisguise= 
+(InfantryType)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>间谍出厂时默认的伪装类型</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>Crew= 
+(InfantryType)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>步兵驾驶员类型，该车辆或建筑要有Crewed=yes</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>Engineer= 
+(InfantryType)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>基地类的建筑卖掉或者被摧毁出来的工程师。默认[General]?Engineer</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>Technician= 
+(InfantryType)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>技术员，某些特殊建筑卖掉或被摧毁时出来。默认[General]?Technician</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>SurvivorDivisor= 
+(integer)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>卖建筑炸建筑的残兵数量，越大越少</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑><STRONG>AI基础防御</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>AI.BaseDefenses= 
+(list of BuildingTypes)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>AI用的防御建筑名单</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>AI.BaseDefenseCounts=&nbsp;(list 
+of integers)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>AI的防御建筑数目，数字依次为困难，中等，简单</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑><STRONG>伞兵</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>ParaDrop.Types= 
+(list of InfantryTypes and/or VehicleTypes)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>默认的科技机场伞兵，和国家设定一样，如果国家设定没有就用阵营设定，原有三阵营的默认值就是YuriParaDropInf附近那些，你懂的</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>ParaDrop.Num= 
+(list of integers)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>和国家设定一样，如果国家设定没有就用阵营设定</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>ParaDrop.Aircraft= 
+(AircraftType)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>和国家设定一样，如果国家设定没有就用阵营设定</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>Parachute.Anim= 
+(Animation)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>和国家设定一样，如果国家设定没有就用阵营设定。默认使用PARACH.Parachute.Anim=</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑><STRONG>狩猎者</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>HunterSeeker= 
+(VehicleType)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>狩猎者超武使用的单位，覆盖全局值的[General]?GDIHunterSeeker和[General]?NodHunterSeeker。默认none<BR></FONT></DIV></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑><STRONG>阵营界面</STRONG></FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>Sidebar.MixFileIndex= 
+(integer)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>使用Sidec0*.mix作为界面</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>Sidebar.YuriFileNames= 
+(boolean)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>是否用尤里的界面sidec02md.mix和里面包含的其他内容</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>ToolTipColor= 
+(R,G,B)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>提示文本和分数界面等等的字体颜色第二第三阵营默认255,255,0，其余的都是164,210,255</FONT></DIV>
+<DIV><BR><FONT color=#000000 face=微软雅黑><FONT color=#800080><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>MessageTextColor= (Color 
+scheme)<BR></STRONG></FONT>地图触发动作11产生的文本颜色，第二阵营默认6号颜色，第三阵营默认13号颜色，其余的都是11号颜色，在原版rules里，这几个颜色分别是DarkRed，DarkSky，DarkBlue</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>DialogBackground.Image= 
+(filename, *including* the .shp extension)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>这个阵营的背景对话框shp，大小452x326，默认PUDLGBGA.SHP，PUDLGBGS.SHP和PUDLGBGY.SHP为第一第二以及其他阵营需要设置DialogBackground.Palette=</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>DialogBackground.Palette= 
+(filename, *including* the .pal extension)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>色盘默认DIALOG.PAL为第一第二阵营，其他阵营DIALOG.PAL</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>LoadingTheme= 
+(theme id)</STRONG>  
+</FONT><BR>多人游戏时阵营载入音乐。默认LOADING</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#800080 face=微软雅黑><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>EVA.Tag= 
+(EVA event)</STRONG></FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>Eva文件的设定名，如酥菌的所有都是Russian，萌菌的所有都是Allied，原NP的第四阵营都是Fourth</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><STRONG>分数画面和背景音乐</STRONG></FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT size=3><SPAN 
+style="FONT-SIZE: 15pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'"></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><STRONG>战役</STRONG></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">对这个不了解的直接去翻原版</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">mix里的相关文件。</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>&nbsp;</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>CampaignScore.Background=&nbsp;(filename,&nbsp;*including*&nbsp;the&nbsp;.shp&nbsp;extension)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">一个</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">632x568</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">的图片用做背景。使用的色盘定义为</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">CampaignScore.Palette</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">。默认是</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">ASCRBKMD.SHP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">，</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">SSCRBKMD.SHP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">或</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">SYCRBKMD.SHP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">作为第一，第二，第三及其他阵营的背景</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>CampaignScore.Transition=&nbsp;(filename,&nbsp;*including*&nbsp;the&nbsp;.shp&nbsp;extension)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">过渡形态。使用色盘定义为</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">CampaignScore.Palette</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">。默认是</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">ASCRTMD.SHP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">，</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">SSCRTMD.SHP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">或</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">SYCRTMD.SHP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">作为第一，第二，第三及其他阵营的过渡</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>CampaignScore.Animation=&nbsp;(filename,&nbsp;*including*&nbsp;the&nbsp;.shp&nbsp;extension)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">不断转的那个东西，过渡形态结束后将会循环这玩意儿。使用的色盘定义为</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">CampaignScore.Palette</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">。默认是</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">ASCRAMD.SHP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">，</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">SSCRAMD.SHP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">或</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">SYCRAMD.SHP&nbsp;</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">作为第一，第二，第三及其他阵营的转动动画</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>CampaignScore.Palette=&nbsp;(filename,&nbsp;*including*&nbsp;the&nbsp;.pal&nbsp;extension)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">色盘。默认是</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">ASCORE.PAL</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">，</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">SSCORE.PAL</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">或</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">YSCORE.PAL</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">作为第一，第二，第三及其他阵营的色盘</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>&nbsp;</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">分数画面的音乐也是可以自定义的。</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>CampaignScore.UnderParTheme=&nbsp;(theme&nbsp;id)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">比最快时间完成得还快时播放这个。默认</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">SCORE</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>CampaignScore.OverParTheme=&nbsp;(theme&nbsp;id)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">比最快时间完成得慢时播放这个。默认</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">SCORE</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 15pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: bold; mso-spacerun: 'yes'"><o:p>&nbsp;</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>多人游戏</STRONG></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>MultiplayerScore.Background=&nbsp;(filename,&nbsp;*including*&nbsp;the&nbsp;.shp&nbsp;extension)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">一个</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">632x568</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">的图片用做背景。使用的色盘定义为</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">MultiplayerScore.Palette</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">。默认是</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">MPASCRNL.SHP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">，</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">MPSSCRNL.SHP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">或</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">MPYSCRNL.SHP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">作为第一，第二，第三及其他阵营的背景</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>MultiplayerScore.Palette=&nbsp;(filename,&nbsp;*including*&nbsp;the&nbsp;.pal&nbsp;extension)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">色盘。默认</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">MPASCRN.PAL</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">，</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">MPSSCRN.PAL</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">或</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">MPYSCRN.PAL</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">作为第一，第二，第三及其他阵营的背景</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>MultiplayerScore.Bars=&nbsp;(filename,&nbsp;*including*&nbsp;the&nbsp;.pcx&nbsp;extension)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">各种条子，因为是</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">pcx文件所以不需要色盘，一共有10条，编号01到10，写到这条语句里的时候要把编号换成~~，</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">默认是</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">mpascrnlbar~~</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">.</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">pcx</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">，</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">mpsscrnlbar~~.pcx</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">或</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">mpyscrnlbar~~.pcx</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">作为第一，第二，第三及其他阵营的条子（</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">~~是编号）</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p>&nbsp;</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">我觉得不用说了。</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>MultiplayerScore.WinTheme=&nbsp;(theme&nbsp;id)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">战胜的音乐。默认</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">SCORE</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>MultiplayerScore.LoseTheme=&nbsp;(theme&nbsp;id)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">战败的音乐。默认</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">SCORE</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><o:p>&nbsp;</o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><STRONG>游戏结束时的图片</STRONG></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">就是一辆坦克开火，显示游戏结束之类的那张图片，在原版里所有国家都一样，现在可以自定义，这个</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'">shp至少要有4帧：战役胜利战败，遭遇战胜利战败。</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; FONT-WEIGHT: normal; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>GraphicalText.Image=&nbsp;(filename,&nbsp;*including*&nbsp;the&nbsp;.shp&nbsp;extension)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">图片。默认</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">GRFXTXT.SHP</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><FONT color=#800080><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><STRONG>[Side]</STRONG><STRONG>&gt;</STRONG><STRONG>GraphicalText.Palette=&nbsp;(filename,&nbsp;*including*&nbsp;the&nbsp;.pal&nbsp;extension)</STRONG></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></FONT></P>
+<P style="MARGIN-BOTTOM: 0pt; MARGIN-TOP: 0pt" class=p0><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">色盘。默认</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">GRFXTXT.PAL</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><o:p></o:p></SPAN></P><!--EndFragment--></FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV></BODY></HTML>

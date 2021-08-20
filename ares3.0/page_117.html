@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><head>
+<title>火风暴与火风暴围墙</title>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 9.00.8112.16599"></HEAD>
+<BODY>
+<DIV><FONT face=微软雅黑>Type=Firestorm</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>这是个从TS恢复过来的超武，当启动这个超武时，将会激活火风暴围墙，其能量场可以摧毁任何从上面越过的东西包括炮弹（注意，如果在抛射体上有<FONT color=#ff0000>IgnoresFirestorm=yes（SubjectToFirewall已经被移除了，注意）</FONT>的话可以穿过）。</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>有Firestorm.Wall=yes的建筑将会被视为火风暴围墙并且自动连接。</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>该超武一旦激活，其维持时间由SW.ChargeToDrainRatio控制，直到能量耗尽重新进入充能状态，你也可以手动关闭它以防浪费，具体请参考上面的Charge/Drain部分，你也可以在ModEnc获得更多信息。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>如果一个单位有IgnoresFirestorm=yes，那么当单位通过的时候不会炸。如果单位被摧毁了，乘员不会被驱逐出来（大概是直接躺）。</FONT></DIV>
+<DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><STRONG>定义一个东西为火风暴围墙</STRONG></FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[BuildingType]?Firestorm.Wall= 
+(boolean)<BR>这个建筑是否是火风暴围墙，默认否</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><STRONG>全局设定</STRONG></FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[CombatDamage]?FirestormWarhead= 
+(Warhead)<BR>这个弹头用于启动的火风暴摧毁单位时使用。不能写none否则爆炸。默认是[General]?C4Warhead</FONT></DIV><FONT face=微软雅黑>
+<DIV><BR>[General]?DamageToFirestormDamageCoefficient= (double - 
+multiplier)<BR>这个值乘以火风暴对单位造成的伤害将会反映到火风暴的持续时间，换句话说就是火风暴将会减少使用时间当火风暴摧毁单位的时候，这个值越高，火风暴摧毁单位后减少的持续时间越多。默认0.0，摧毁单位时不会减少持续时间。TS里的值为0.1</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>以下4条语句用来定义火风暴的动画：</DIV>
+<DIV>&nbsp;</DIV>
+<DIV>[AudioVisual]?FirestormActiveAnim= 
+(AnimationType)<BR>火风暴启动后的节点动画，使用建筑色盘。默认GAFSDF_A<BR>[AudioVisual]?FirestormIdleAnim= 
+(AnimationType)<BR>启动后时不时冒出来的火柱。默认FSIDLE<BR>[AudioVisual]?FirestormGroundAnim= 
+(AnimationType)<BR>干掉地面单位后产生的火柱。默认FSGRND<BR>[AudioVisual]?FirestormAirAnim= 
+(AnimationType)<BR>干掉空中单位后产生的火柱，默认FSAIR</DIV>
+<DIV>&nbsp;</DIV>
+<DIV><STRONG>地图触发</STRONG></DIV>
+<DIV><STRONG></STRONG>&nbsp;</DIV>
+<DIV>92和93号触发可以无条件启动或关闭火风暴，并且无限保持在启动状态，不过如果提供火风暴的建筑被摧毁或者因为其他原因，火风暴会像往常一样关闭。触发只能用于非玩家阵营。</DIV>
+<DIV><STRONG></STRONG></FONT><BR><FONT face=微软雅黑>注意：</FONT></DIV></DIV>
+<DIV><FONT face=微软雅黑>AI不会用这个超武。</FONT></DIV></BODY></HTML>

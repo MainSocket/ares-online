@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><head>
+<title>CSF功能增强</title>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.17267"></HEAD>
+<BODY>
+<DIV><FONT face=微软雅黑>除了ra2md.csf，游戏还会载入<FONT color=#808000>stringtable00.csf<FONT color=#000000>到</FONT>stringtable99.csf</FONT>并且优先级更高。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>你也能直接在ini里用<FONT color=#808000>NOSTR:prefix</FONT>命名，比如，UIName=NOSTR:Sonar Pulse会被显示为“Sonar 
+Pulse”，尽管如此，这玩意儿(包括prefix)不能超过31个。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>CSF条目最大能写20000条。</FONT></DIV>
+<P><FONT face=微软雅黑>如果你的stringtableXX.csf无法使用，请自行查阅以下文献：</FONT></P>
+<P><FONT face=微软雅黑><FONT style="BACKGROUND-COLOR: #808080">Language-Neutral String Tables</FONT><A 
+title="Permalink to this headline" class=headerlink 
+style="FONT-SIZE: 1em; TEXT-DECORATION: underline; COLOR: black !important; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 4px; MARGIN-LEFT: 6px; PADDING-RIGHT: 4px; VISIBILITY: hidden" 
+href="#language-neutral-string-tables"></A></P>
+<P 
+style='FONT-SIZE: 14px; FONT-FAMILY: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; MARGIN: 0.8em 0px 0.5em; LETTER-SPACING: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'><FONT style="BACKGROUND-COLOR: #808080">String tables can now be marked as ‘language 
+neutral’ by setting the language field in the header to<SPAN>&nbsp;</SPAN><CITE 
+style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>-1</CITE><SPAN>&nbsp;</SPAN>(or<SPAN>&nbsp;</SPAN><CITE 
+style='FONT-SIZE: 0.95em; FONT-FAMILY: Consolas, "Deja Vu Sans Mono", "Bitstream Vera Sans Mono", monospace; LETTER-SPACING: 0.01em'>FF 
+FF FF FF</CITE><SPAN>&nbsp;</SPAN>in hexadecimal). Files that are language 
+neutral will always load, no matter what language the main string 
+table<SPAN>&nbsp;</SPAN><CODE class="file docutils literal" 
+style="FONT-SIZE: 0.95em; FONT-FAMILY: monospace; BORDER-BOTTOM: rgb(221,221,221) 1px solid; COLOR: rgb(51,51,51); LETTER-SPACING: 0.01em; BACKGROUND-COLOR: rgb(242,242,242)"><SPAN 
+class=pre>ra2md.csf</SPAN></CODE><SPAN>&nbsp;</SPAN>is.</FONT></P>
+<P 
+style='FONT-SIZE: 14px; FONT-FAMILY: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FONT-WEIGHT: 400; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; MARGIN: 0.8em 0px 0.5em; LETTER-SPACING: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial'><FONT style="BACKGROUND-COLOR: #808080">If your string table editor does not support 
+setting the language manually, use a hex editor to set the four bytes starting 
+at offset 0x14 directly.</FONT></P>
+<DIV><BR></DIV></FONT>
+<DIV>&nbsp;</DIV></BODY></HTML>

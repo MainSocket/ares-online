@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.17267"></HEAD>
+<BODY>
+<DIV><FONT color=#000000 face=微软雅黑>Type=MultiMissile</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>默认值：</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>[SuperWeapon]&#9658;SW.Damage= 
+(integer)</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>伤害，负数则用payload的伤害。默认-1</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>[SuperWeapon]&#9658;SW.Warhead= 
+(Warhead)</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>不写的话就用payload的弹头</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>[SuperWeapon]&#9658;SW.ActivationSound= 
+(Sound)</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>核弹警告。默认[AudioVisual]&#9658;DigSound</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>[SuperWeapon]&#9658;SW.AITargeting= 
+(enum)</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>AI瞄准参数。默认Nuke.</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>[SuperWeapon]&#9658;Light.*= (integer)</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 
+face=微软雅黑>光线设定。差不多就是Light.Ambient=200，Light.Red=175，Light.Green=150，Light.Blue=125</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>特殊值:</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>[SuperWeapon]&#9658;Nuke.Payload= 
+(Weapon)</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑>砸下来的核弹类型。默认nukepayload</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>[SuperWeapon]&#9658;Nuke.TakeOff= 
+(Animation)</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 
+face=微软雅黑>核弹起灰时候的动画。默认[General]&#9658;NukeTakeOff.Nuke.TakeOff=</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>[SuperWeapon]&#9658;Nuke.PsiWarning= 
+(Animation)</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 
+face=微软雅黑>心灵探测器探测到核弹的警告动画。默认PSIWARN.Nuke.PsiWarning=</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>[SuperWeapon]&#9658;Nuke.SiloLaunch= 
+(boolean)</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 face=微软雅黑>是否从核弹井发射，否的话弹头会直接落下</FONT></DIV>
+<DIV><FONT color=#000000 face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT color=#000000 
+face=微软雅黑>核弹的一切起灰武器之类都要用子武器列表注册，总之要照抄原来的那套，ARES允许多个类型核弹井发射同一超武。</FONT></DIV></BODY></HTML>

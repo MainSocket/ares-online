@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><head>
+<title>铁幕弹头</title>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.17267"></HEAD>
+<BODY>
+<DIV><FONT face=微软雅黑>可以加铁幕，可以消铁幕。</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑>和EMP一样为局部定义，一个弹头有自己的叠加参数，比如强力铁幕弹头可以+100，最高151帧，垃圾铁幕弹头最高堆20帧一次+10，一个铁幕计数器50的单位被强力弹头打了变150，再被弱的打一下还是150。</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>IronCurtain.Duration= (integer - 
+frames)<BR></STRONG></FONT>正数加，负数减，帧数</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>IronCurtain.Cap= 
+(integer)<BR></STRONG></FONT>负数不能叠加，0无限叠加，不是0就是有个最大值除非铁幕计数器已经超过最大值</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>IronCurtain.Modifier= (float - 
+multiplier)<BR></STRONG></FONT>单位受铁幕影响的倍数关系，默认100，0就是不受影响</FONT></DIV><FONT face=微软雅黑>
+<DIV><BR>如果铁幕效果和普通效果同时存在，必定是先常规伤害，organic和步兵会秒杀</DIV>
+<DIV><STRONG>铁幕闪光</STRONG><BR>     
+           就是被铁幕了的东西被打中产生的那个蓝色的/黑色的椭圆形特效。</DIV>
+<DIV><FONT color=#800080><STRONG>[AudioVisual]&gt;IronCurtainFlash= (boolean)</STRONG></FONT> <BR>  
+               
+            
+是否会产生上述现象。默认是。<BR><FONT color=#800080><STRONG>[Warhead]&gt;IronCurtain.Flash= (boolean)</STRONG></FONT> <BR>  
+               
+             
+局部覆盖。默认同[AudioVisual]<STRONG><FONT color=#800080>&gt;</FONT></STRONG>IronCurtainFlash。</FONT></DIV></BODY></HTML>

@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7600.17267"></HEAD>
+<BODY>
+<DIV><FONT face=微软雅黑>Type=ParaDrop&amp;Type=AmerParaDrop</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>注意：Type=AmerParaDrop只能有一个</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>默认值：</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;SW.AITargeting= (enum)</FONT></DIV>
+<DIV><FONT face=微软雅黑>默认AI瞄准类型为ParaDrop</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT 
+face=微软雅黑>旧式空降只能用步兵，坦克填写进去的话会强制用一个步兵类型单位，要有效降坦克，必须用ARES专用代码。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT 
+face=微软雅黑>不定义类型的话，会用国家和阵营的设定。旧版INI只支持三阵营和美国的默认步兵设定，要降坦克必须用ARES代码重设定，原版的四类全局代码可以删除，改成阵营局部设定。原版删除会IE，ARES可以放心。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>特殊值：</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;ParaDrop.Types= (list of InfantryTypes and/or 
+VehicleTypes)</FONT></DIV>
+<DIV><FONT face=微软雅黑>单位类型。对于Type=AmerParaDrop默认为AmerParaDropInf=</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;ParaDrop.Num= (list of integers)</FONT></DIV>
+<DIV><FONT face=微软雅黑>每个单位的数字。对于Type=AmerParaDrop默认AmerParaDropNum=</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;ParaDrop.Aircraft= 
+(AircraftType)</FONT></DIV>
+<DIV><FONT face=微软雅黑>默认飞机和国家相同</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[SuperWeapon]&#9658;ParaDrop.Count= (integer - number of 
+planes)</FONT></DIV>
+<DIV><FONT face=微软雅黑>飞机数目默认1，可以单独设定超武的每一个飞机</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>[Superweapon]&#9658;ParaDrop.ID.PlaneX.*=</FONT></DIV>
+<DIV><FONT face=微软雅黑>ID 是国家或阵营名 X 是正整数，起始点 2 终点是飞机数目 Count。第一架飞机不要用 PlaneX 
+，如果要，设定所有阵营，ID不写</FONT></DIV>
+<DIV><FONT face=微软雅黑>这个功能就是比如第一个飞机是入侵者第二个飞机是黑鹰第三个是运输机</FONT></DIV>
+<DIV><FONT face=微软雅黑>[Superweapon]&#9658;Paradrop.Country.PlaneX.*=国家设定</FONT></DIV>
+<DIV><FONT face=微软雅黑>[Superweapon]&#9658;Paradrop.Side.PlaneX.*=阵营设定X</FONT></DIV>
+<DIV><FONT face=微软雅黑>[Superweapon]&#9658;Paradrop.PlaneX.*= 超武默认飞机X</FONT></DIV>
+<DIV><FONT face=微软雅黑>[Superweapon]&#9658;Paradrop.Country.*= 国家默认飞机X</FONT></DIV>
+<DIV><FONT face=微软雅黑>[Superweapon]&#9658;Paradrop.Side.*= 阵营默认飞机X</FONT></DIV>
+<DIV><FONT face=微软雅黑>[Superweapon]&#9658;Paradrop.*= 超武的默认飞机</FONT></DIV>
+<DIV><FONT face=微软雅黑>[Country]&#9658;Paradrop.*=国家默认飞机</FONT></DIV>
+<DIV><FONT face=微软雅黑>[Side]&#9658;Paradrop.*= 阵营默认飞机</FONT></DIV>
+<DIV><FONT face=微软雅黑>[General]&#9658;*=全局默认飞机</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT 
+face=微软雅黑>Type=ParaDrop和Type=AmerParaDrop只有一些默认值的区别，AI都会使用。</FONT></DIV></BODY></HTML>
