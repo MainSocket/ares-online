@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>地道网络系统</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<P><FONT size=3 face=微软雅黑>这个地道网络系统来自于命令与征服：将军，隧道建筑之间互相连通，可以快速移动部队从一个隧道建筑到另一个隧道建筑</FONT><FONT size=3 face=微软雅黑>。<BR>实际上来说，单位并不是真的在隧道之间移动。一个玩家可以有多种隧道建筑，但它们共享一个容纳空间，只要进入其中一个隧道建筑，他们就可以立即从另一个入口出来。<BR>在玩家的最后一个隧道建筑被摧毁前已经进入的单位将会一直保留，但是当最后一个隧道被摧毁时其中的单位会被全部杀死，击杀者也会获得隧道内单位的经验和击杀数。如果最后一个隧道建筑被变卖，单位将试图从中撤出。</FONT></P>
+<P><FONT size=3 face=微软雅黑>隧道类型需要在<FONT color=#ff0000>[TunnelType]</FONT>注册表下进行注册。</FONT></P>
+<P><FONT size=3 face=微软雅黑>以下是隧道类型可用语句：</FONT></P>
+<P><FONT color=#800080 size=3 face=微软雅黑><STRONG>[TunnelType]</STRONG><STRONG>&gt;</STRONG><STRONG>Passengers= 
+(integer)</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑>这种地道网络系统所能容纳的最大人数，每个单元占用一格容量。</FONT></P>
+<P><FONT size=3 face=微软雅黑><BR><FONT color=#800080><STRONG>[TunnelType]</STRONG><STRONG>&gt;</STRONG><STRONG>MaxSize= 
+(double)</STRONG></FONT></FONT></P>
+<P><FONT size=3 face=微软雅黑>能进入隧道的单位的最大尺寸，大于这个值的单位进不来。</FONT></P>
+<P><FONT size=3 face=微软雅黑></FONT>&nbsp;</P>
+<P><FONT size=3 face=微软雅黑>一个建筑可以通过设置以下标签变成一个隧道的入口。多个建筑可以共享相同的隧道模式。<BR>只有尺寸小于或等于隧道入口的SizeLimit单位允许进入入口。</FONT></P>
+<P><FONT size=3 face=微软雅黑>注意：</FONT></P>
+<P><FONT size=3 face=微软雅黑>单位从地道网络入口跑出来目前没有次序，这可能会在未来的版本中的更新</FONT></P>
+<P>&nbsp;</P>
+<P><FONT size=3 face=微软雅黑>快速入门：</FONT></P>
+<P><FONT size=3 face=微软雅黑>如果你没有单位进入隧道的入口指针，检查是否正确设置隧道建筑的Passengers=和MaxSize=。</FONT></P>
+<P><FONT size=3 face=微软雅黑>每当单位进入或离开隧道建筑，隧道入口可以播放EnterTransportSound和LeaveTransportSound这些装载/卸载音效，隧道入口建筑物将显示代表隧道系统内容物的格子。</FONT></P>
+<P><FONT color=#800080 size=3 face=微软雅黑><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>Tunnel= 
+(TunnelType)</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑>设置该建筑的隧道类型</FONT></P>
+<P><FONT size=3 face=微软雅黑>注意：</FONT></P>
+<P><FONT size=3 face=微软雅黑>隧道建筑是不允许拥有武器和炮塔的，更不能使用超空间监狱和心灵控制逻辑。</FONT></P>
+<P><FONT size=3 face=微软雅黑>警告：</FONT></P>
+<P><FONT size=3 face=微软雅黑>悬浮单位在进入UnitAbsorb=Yes的建筑时有BUG（虽然我不知道是啥BUG），在进入隧道入口的建筑有同样的问题。</FONT></P>
+<P><FONT size=3 face=微软雅黑>举例：</FONT></P>
+<P><FONT size=3 face=微软雅黑>首先注册隧道类型<BR><FONT color=#800080>[TunnelTypes]<BR>0=GLATunnel<BR>1=CivilianTunnel<BR>2=LoveTunnel</FONT></FONT></P>
+<P><FONT size=3 face=微软雅黑>给隧道类型写上该隧道类型的属性<BR><FONT color=#800080>[GLATunnel]<BR>Passengers=8<BR>MaxSize=4.0</FONT></FONT></P>
+<P><FONT size=3 face=微软雅黑>将隧道类型赋予隧道建筑<BR><FONT color=#800080>[CATNNL]<BR>Tunnel=CivilianTunnel</FONT></FONT></P></body>
+</html>

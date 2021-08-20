@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = "urn:schemas-microsoft-com:office:office"><head>
+<title>自愈</title>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7601.18934"></HEAD>
+<BODY>
+<P><FONT face=微软雅黑>单位升级后自愈的能力是被游戏平台定死的，现在可以自定义。</FONT></P>
+<P><FONT face=微软雅黑><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>SelfHealing.Rate= 
+(double - minutes)<BR></STRONG></FONT>自愈速率。默认[General]?RepairRate.</FONT></P>
+<P><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>SelfHealing.Max= 
+(double - 
+percentage)<BR></STRONG></FONT>自愈上限，自愈至总血量的多少后就不再自愈。单位升级后的自愈上限可以用下面3条语句调整。默认100%</FONT></P>
+<P><FONT color=#800080 face=微软雅黑><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>SelfHealing.RookieMax= 
+(double - percentage)</STRONG></FONT></P>
+<P><FONT color=#800080 face=微软雅黑><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>SelfHealing.VeteranMax= 
+(double - percentage)</STRONG></FONT></P>
+<P><FONT face=微软雅黑><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>SelfHealing.EliteMax= (double - 
+percentage)<BR></STRONG></FONT>对应新兵，老兵，精英的自愈上限。默认SelfHealing.Max</FONT></P>
+<P><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>SelfHealing.Amount= (integer - 
+hitpoints)<BR></STRONG></FONT>自愈时每次恢复多少血量，不能低于0。默认1<BR></FONT></P>
+<P><FONT color=#800080 face=微软雅黑><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>SelfHealing.RookieAmount= 
+(integer - hitpoints)</STRONG></FONT></P>
+<P><FONT color=#800080 face=微软雅黑><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>SelfHealing.VeteranAmount= 
+(integer - hitpoints)</STRONG></FONT></P>
+<P><FONT face=微软雅黑><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>SelfHealing.EliteAmount= (integer - 
+hitpoints)<BR></STRONG></FONT>无需多言。默认SelfHealing.Amount</FONT></P>
+<P><FONT color=#800080><FONT face=微软雅黑><STRONG>[TechnoType]&gt;SelfHealing.CombatDelay= (integer - 
+frames)</STRONG>   
+<BR><FONT color=#000000>在单位攻击（到底是攻击还是被攻击尚不清楚）之后多长时间不能自愈。默认0。</FONT></FONT></FONT></P></BODY></HTML>

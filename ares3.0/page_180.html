@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = "urn:schemas-microsoft-com:office:office"><head>
+<title>假存在</title>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7601.18934"></HEAD>
+<BODY>
+<P><FONT face=微软雅黑>定义一个建筑为假建筑，假建筑被自己和友军选中时会显示TXT_FAKE字样，间谍渗透后也会有这效果。如果要更好地蒙骗对手还得用上假名称逻辑。</FONT></P>
+<P><FONT face=微软雅黑><FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>Fake= 
+(boolean)<BR></STRONG></FONT>定义该建筑为假建筑。默认no</P>
+<P><FONT face=微软雅黑><FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>EnemyUIName= (csf 
+string)<BR></STRONG></FONT>非友方看该建筑时显示这个名称，而不是真实名称。</FONT></P>
+<P><FONT face=微软雅黑>注意：目前该逻辑只适用于建筑，以后或许会扩展至所有类型单位。</FONT></P>
+<P><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;FakeOf= (TechnoType)</STRONG>  
+<BR><FONT color=#000000>这个单位是什么单位的假单位。当使用快捷键查询该单位时，会重定义到原本的单位上。比较著名的是摸3的天秤和妹妹的关系。默认none。</FONT> 
+</FONT></P>
+<P><STRONG><FONT color=#800080></FONT></STRONG>&nbsp;</P></FONT></BODY></HTML>

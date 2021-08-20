@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>新的触发行为</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<P><FONT size=3 face=微软雅黑><STRONG>激活火风暴（92）</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑>激活拥有技能的火风暴围墙<BR>无论超级武器充能cd的状态表现如何，火风暴围墙发动都不会产生消耗<BR>但一旦建筑断电，火风暴围墙会被关闭</FONT></P>
+<P><FONT size=3 face=微软雅黑>这些地图动作只支持并非玩家控制的建筑</FONT></P>
+<P><FONT color=#800080 size=3 face=微软雅黑><STRONG>92,0,0,0,0,0,0,A.</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑></FONT><FONT size=3 face=微软雅黑><BR><STRONG>停止火风暴（93）</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑>这是激活拥有技能的火风暴围墙的附属部分触发<BR>使用这个触发来关闭被触发激活的火风暴围墙</FONT></P>
+<P><FONT size=3 face=微软雅黑>这些地图动作只支持并非玩家控制的建筑</FONT></P>
+<P><FONT color=#800080 size=3 face=微软雅黑><STRONG>93,0,0,0,0,0,0,A.</STRONG></FONT></P>
+<P><BR><FONT size=3 face=微软雅黑><STRONG>辅助电源（146）</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑>永久性增加建筑供电需求电量，可以写负值以减少电量。<BR>这个效果被允许多次触发累积计算</FONT></P>
+<P><FONT color=#800080 size=3 face=微软雅黑><STRONG>146,11,&lt;house 
+id&gt;,0,0,0,0,&lt;power&gt;.</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑><STRONG>击杀驾驶员（147）</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑>击杀所有被该触发包括在内的载具单位<BR>该触发尊重受到保护的单位的影响而不被触发，这包括铁幕和其他保护机制，用来阻止司机被击杀</FONT></P>
+<P><FONT size=3 face=微软雅黑>所有受到影响的单位所属方将变更<BR>使用-1参数会变更为Special</FONT></P>
+<P><FONT color=#800080 size=3 face=微软雅黑><STRONG>147,0,&lt;house 
+id&gt;,0,0,0,0,A.</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑><STRONG>设置EVA语音（148）</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑>这个触发可以设置玩家的EVA语音，内置的EVA语音包括0，1，2，分别对应原版yr的苏联，盟军和尤里。<BR>数字可以自定义为任何数字，以表现自定义的新阵营<BR>使用-1可禁用EVA</FONT></P>
+<P><FONT size=3 face=微软雅黑>这可以实现火风暴触发动作的禁止 EVA（102）和启用EVA（103）</FONT></P>
+<P><FONT color=#800080 size=3 face=微软雅黑><STRONG>148,0,&lt;eva 
+index&gt;,0,0,0,0,A.</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑><STRONG>编组（149）</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑>设置触发这个操作的对象的group<BR>用以用于通过TeamTypes和TaskForces重组</FONT></P>
+<P><FONT size=3 face=微软雅黑>这实现了火风暴触发动作Set Group (104)</FONT></P></body>
+</html>

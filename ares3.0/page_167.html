@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><head>
+<title>破坏者</title>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 9.00.8112.16599"></HEAD>
+<BODY>
+<DIV><FONT face=微软雅黑>沙丘2000中有一种名为破坏者的步兵，他们能够进入建筑并摧毁之，同时牺牲自己，ARES复刻了这个逻辑。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑>只有敌方建筑可以被破坏，在可破坏的建筑上玩家会得到进入光标。</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><FONT color=#800080><STRONG>[InfantryType]</STRONG><STRONG>&gt;</STRONG><STRONG>Saboteur= 
+(boolean)</STRONG></FONT><BR>是否这个步兵可以进入可破坏建筑。这个建筑将会像按了C4一样被摧毁，并且破坏者在这个过程中被消耗。需要Infiltrate=yes。不能和偷车贼逻辑，CanDrive=yes, 
+C4和Occupier=yes语句连用。默认为no</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>ImmuneToSaboteurs= 
+(boolean)</STRONG></FONT><BR>这个建筑能否被破坏，如果填yes，破坏者就不能进入。如果写了CanC4=no或者TechLevel=-1或者CanBeOccupied=yes则默认yes，其他情况下为no</FONT></DIV></BODY></HTML>

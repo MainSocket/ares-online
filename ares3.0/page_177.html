@@ -1,0 +1,13 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = "urn:schemas-microsoft-com:office:office"><head>
+<title>立体爆炸弹头</title>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7601.18934"></HEAD>
+<BODY>
+<P><FONT face=微软雅黑>和NPEXT的立体爆炸弹头差不多，原版中地表爆炸的弹头不会伤到空中单位，桥上的则可以伤害到，现在可以设置了。</FONT></P>
+<P><FONT color=#800080 face=微软雅黑><STRONG>[Warhead]</STRONG><STRONG>&gt;</STRONG><STRONG>DamageAirThreshold= 
+(integer - leptons)</STRONG></FONT>   </P>
+<P><FONT face=微软雅黑>如果弹头在离地这么高的地方爆炸就会伤害到空中单位，低于这个高度就不会，-1代表永远会伤害到，写一个很高的值如9999就能防止该弹头伤害到空中单位。默认0</FONT></P>
+<P><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[General]</STRONG><STRONG>&gt;</STRONG><STRONG>DamageAirConsiderBridges= 
+(boolean)<BR></STRONG></FONT>是否所有弹头都能伤害到空中单位（视作在桥上爆炸）。默认no</FONT></P>
+<P><FONT face=微软雅黑>桥面上爆炸的高度相当于416leptons，即4层。</FONT></P></BODY></HTML>

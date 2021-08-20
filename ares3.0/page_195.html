@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>AI对于建筑物的设定</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<P><FONT size=3 face=微软雅黑><STRONG><FONT size=4>建造数量</FONT></STRONG><FONT color=#800080>   
+</FONT></FONT></P>
+<P><FONT size=3 face=微软雅黑>在原版中，AI的对于同一种建筑只会建造一次。只有电厂和防御设施是例外的，他们将会分别在AI电力匮乏和防御短缺的时候被多次建造。<BR>现在Ares里你可以轻松的设置AI将会建造多少同种建筑。这个数值将会在你设定的基准数中随机选取一个，并加上额外数值。</FONT></P>
+<P><FONT size=3 face=微软雅黑><FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>AIBuildCounts= 
+(list of integers)</STRONG>   
+</FONT><BR>AI将在不同难度下建造几个这种建筑，依次为困难，中等，简单。设定数值必须大于等于1。默认1,1,1<BR><FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>AIExtraCounts= 
+(list of integers)</STRONG></FONT><BR>AI将在不同难度下额外建造几个这种建筑，依次为困难，中等，简单。AI将会在随机建造完之后，额外建造建筑物。设定数值必须大于等于0，默认0,0,0</FONT></P>
+<P><FONT size=3 face=微软雅黑><FONT size=4><STRONG>决定一个建筑是否可以为AI提供拓展</STRONG></FONT><BR><FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>AIBaseNormal= 
+(boolean)</STRONG></FONT> 
+<BR>决定AI能否用此建筑进行拓展，当建筑既有UndeploysInto=又有ResourceGatherer=yes时为否，或者当一个建筑被判定为载具的时候也为否（即1x1的可以反部署的建筑）。</FONT></P>
+<P><FONT size=3 face=微软雅黑><FONT size=4><STRONG>决定此建筑是否会被AI造在基地内部</STRONG></FONT><BR><FONT color=#800080><STRONG>[BuildingType]&gt;AIInnerBase= (boolean)</STRONG></FONT> 
+<BR>决定AI是否会把这个建筑放到基地内部。<FONT color=#000000>默认同CloakGenerator的设定。</FONT></FONT></P>
+<P>&nbsp;</P>
+<P>&nbsp;</P></body>
+</html>

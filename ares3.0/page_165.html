@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><head>
+<title>乘员</title>
+
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 9.00.8112.16599"></HEAD>
+<BODY>
+<DIV><FONT face=微软雅黑 size=5><STRONG>特定乘员</STRONG></FONT></DIV>
+<DIV><FONT face=微软雅黑>可以指定单位能否进某个特定单位，这个逻辑<FONT color=#ff0000>仅</FONT>支持VehicleTypes和AircraftTypes。</FONT></DIV>
+<DIV><FONT face=微软雅黑>从2.0版本开始也可以设定在BuildingTypes上</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>Passengers.Allowed= 
+(list of TechnoTypes)</STRONG>   
+</FONT><BR>这些单位可以进入这个单位。如果你想让所有单位都进不去，就设置成一个假单位或者一个建筑</FONT></DIV>
+<DIV><BR><FONT face=微软雅黑><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>Passengers.Disallowed= 
+(list of TechnoTypes)</STRONG></FONT><BR>这些单位不允许进入这个单位</FONT></DIV>
+<DIV><FONT face=微软雅黑></FONT>&nbsp;</DIV>
+<DIV><FONT face=微软雅黑 size=5><STRONG>忽略乘员大小</STRONG></FONT></DIV>
+<DIV><FONT face=微软雅黑><FONT color=#800080><STRONG>[UnitType]</STRONG><STRONG>&gt;</STRONG><STRONG>Passengers.BySize= 
+(boolean)</STRONG></FONT> 
+<BR>决定这个载具在装载乘员的时候，是否读取<FONT color=#ff0000>Size</FONT>，如果no，则载具能装载相当于它<FONT color=#ff0000>Passengers</FONT>数量的单位。（即所有成员只占1格）。默认yes。</FONT></DIV>
+<DIV><FONT face=微软雅黑>需要注意的是，<FONT color=#ff0000>SizeLimit</FONT>是永久读取的。</FONT></DIV></BODY></HTML>

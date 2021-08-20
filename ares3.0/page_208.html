@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>变形逻辑</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<P><FONT size=3 face=微软雅黑><FONT size=4><STRONG>通过部署变换单位</STRONG></FONT>      &nbsp; 
+<BR><FONT color=#800080><STRONG>[TechnoType]&gt;Convert.Deploy=    (TechnoType) <BR></STRONG></FONT>   
+设置IsSimpleDeployer=          
+          yes单位部署变换成什么单位。变换发生在单位部署完成后，也就是DeployingAnim播放完之后。默认none。 
+</FONT></P>
+<P><FONT size=3 face=微软雅黑>         
+       部署后，单位是可动的，不像武装直升机那样部署后锁在那个格子里。 </FONT></P>
+<P><FONT size=3 face= 微软雅黑>  DeployToLand=yes也支持，DeployingAnim也可以看，而且DeployToLand=no也可以用DeployDir。 </FONT></P>
+<P><FONT size=3 face=微软雅黑>       
+ 与升级转换有同样的限制，除了：&nbsp; <BR>     - 
+改变Locomotor是支持的（比如武装直升机变坦克这种变换） <BR>          
+            -&nbsp;因为这种变换一定是发生在地图上的，所以Size的变化是允许的。 
+</FONT></P>
+<P><FONT size=3 face=微软雅黑>悬浮单位也可以部署变形，如果DeployToLand=yes的话，单位会平滑地着陆；否则闪现到地面上。</FONT></P><FONT face=微软雅黑>
+<P><FONT size=4><STRONG>通过脚本变换单位</STRONG><FONT size=3>   <BR><FONT color=#800080><STRONG>[TechnoType]&gt;Convert.Script= (TechnoType)</STRONG></FONT> 
+    <BR>           
+    当单位执行脚本时变换成什么单位。默认none。</FONT></FONT></P>
+<P><FONT size=3></FONT><BR><FONT size=3><STRONG><FONT size=4>  增强WaterImage</FONT></STRONG>   <BR><FONT color=#800080><STRONG>[TechnoType]&gt;Convert.Water= (TechnoType)</STRONG></FONT> 
+    <BR>           
+    当单位移动到海滩或水格上变换成什么单位。默认none。 </FONT></P>
+<P><FONT size=3><FONT color=#800080><STRONG>[TechnoType]&gt;Convert.Land= (TechnoType)</STRONG></FONT>     <BR> 
+               
+当单位移动到既不是海滩也不是水的格子上变换成什么单位。默认none。</FONT> </FONT></P></body>
+</html>

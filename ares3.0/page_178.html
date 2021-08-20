@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = "urn:schemas-microsoft-com:office:office"><head>
+<title>增强的弹药逻辑</title>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7601.18934"></HEAD>
+<BODY>
+<P><FONT size=4 face=微软雅黑><STRONG>单独的消耗弹药计算</STRONG></FONT></P>
+<P><FONT face=微软雅黑>可以单独设置武器一次消耗多少弹药。</FONT></P>
+<P><FONT face=微软雅黑><FONT color=#800080><STRONG>[Weapon]</STRONG><STRONG>&gt;</STRONG><STRONG>Ammo= (integer)<BR></STRONG></FONT>写0就是不消耗弹药。默认1</FONT></P>
+<P><FONT face=微软雅黑></FONT>&nbsp;</P>
+<P><FONT size=4 face=微软雅黑><STRONG>弹药一次恢复量以及空仓时弹药一次恢复量</STRONG></FONT></P>
+<P><FONT face=微软雅黑><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>ReloadAmount= 
+(integer)<BR></STRONG></FONT>弹药一次恢复多少，不支持负值。默认1</FONT></P><FONT face=微软雅黑>
+<P><BR><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>EmptyReloadAmount= 
+(integer)<BR></STRONG></FONT>写0或负值就会让单位打完所有弹药后不会恢复，默认ReloadAmount</P>
+<P>&nbsp;</P>
+<P>注意：以上不支持飞机类单位</P>
+<P>&nbsp;</P>
+<P><FONT size=4><STRONG>飞机专用的弹药恢复速率</STRONG></FONT></P>
+<P>在原版当中飞机恢复弹药是定死的，如果你要做一个大弹药量用机枪为武器的飞机就很蛋疼，用这个就可以解决问题。</P>
+<P><FONT color=#800080><STRONG>[AircraftType]</STRONG><STRONG>&gt;</STRONG><STRONG>ReloadRate= 
+(double - 
+minutes)<BR></STRONG></FONT>恢复速率，停靠建筑必须有UnitReload=yes。默认[General]?ReloadRate</P>
+<P>&nbsp;</P>
+<P><STRONG><FONT color=#000000 size=4>弹药耗尽时切换武器</FONT></STRONG></P>
+<P>一个很实用的功能，效果如标题所说。</P>
+<P><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>NoAmmoWeapon= 
+(integer)<BR></STRONG></FONT>当弹药用尽后切换至另一武器。值为0是主武器，1为副武器，-1不切换武器。默认-1</P>
+<P>注意</P>
+<P>该标签不能覆盖被载具和步兵上的DeployFire=yes启用的DeployFireWeapon。</P>
+<P><BR><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>NoAmmoAmount= 
+(integer)<BR></STRONG></FONT>如果弹药等于低于该值，则启用NoAmmoWeapon。默认0</P></FONT></BODY></HTML>

@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>新的触发条件</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<P><STRONG>电磁脉冲（62-65）</STRONG></P>
+<P><STRONG><FONT color=#800080>62,0,0</FONT></STRONG> EMP：一个单位被EMP瘫痪时触发</P>
+<P><STRONG><FONT color=#800080>63,0,&lt;house&gt;</FONT></STRONG> 被某个所属方使用的EMP攻击：当指定的所属方使用EMP使得对象失效时触发</P>
+<P><STRONG><FONT color=#800080>64,0,0</FONT></STRONG> 移除EMP：当被附加的对象受到一个“解除型”EMP而激活时触发</P>
+<P><STRONG><FONT color=#800080>65,0,&lt;house&gt;</FONT></STRONG> 被某个所属方使用的EMP移除效果：当指定的所属方使用“解除型”EMP重新激活附加对象时触发</P>
+<P>以上都是一次的，非持续性的</P>
+<P>当停用一个对象的时候，事件63在62之前被触发。<BR>而当重新激活的时候，65会在64之前被触发。<BR>这允许特定所属方完成优先于一般情况不同的效果。</P>
+<P><STRONG>敌人被聚光灯建筑发现(66)</STRONG></P>
+<P><STRONG><FONT color=#800080>66,0,0</FONT></STRONG> 敌人在一个聚光灯下：当一个建筑的聚光灯搜索时发现一个敌人时触发，这就像是火风暴54条件</P>
+<P>这与条件35工作原理相同，但是有一点区别，游戏将不会记录这个事件是否发生了。</P>
+<P>这个事件是一次的，非持续性的。</P>
+<P><STRONG>击杀驾驶员（67 68）</STRONG> </P>
+<P><STRONG><FONT color=#800080>67,0,0</FONT></STRONG> 驾驶员击杀：当一个关联对象被杀害时触发</P>
+<P><STRONG><FONT color=#800080>68,0,&lt;house&gt;</FONT></STRONG> 驾驶员被所属方击杀：当指定的所属方击杀对象驾驶员时触发</P>
+<P>这两个触发都是一次的，非持续性的。</P>
+<P>当击杀一个驾驶员时，事件68会在67之前被触发，这是让特定的所属方优先于一般情况。</P>
+<P><STRONG><FONT color=#000000>车辆被劫持者抢走(69 
+70)</FONT></STRONG> </P>
+<P><STRONG><FONT color=#800080>69,0,0</FONT></STRONG> 被劫持车辆：当劫持者进入车辆时触发</P>
+<P><STRONG><FONT color=#800080>70,0,&lt;house&gt;</FONT></STRONG> 被特定所属方劫持车辆：当特定所属方的劫持者进入指定目标车辆时触发</P>
+<P>这两个事件都是一次，也是持续的。</P>
+<P>当劫持车辆时，事件70会在69之前被触发，这可以使得特定所属方完成表现出和一般情况不同的效果。<BR>两者都在事件进行时触发。</P>
+<P><STRONG>劫持车辆(71 74)</STRONG> </P>
+<P><STRONG><FONT color=#800080>71,0,0</FONT></STRONG> 被劫持的车辆：当对象被劫持时触发</P>
+<P><STRONG><FONT color=#800080>72,0,&lt;house&gt;</FONT></STRONG> 被特定所属方劫持：当指定所属方劫持对象时触发</P>
+<P><STRONG><FONT color=#800080>73,0,0</FONT></STRONG> 劫持的东西：当对象劫持某个单位时触发</P>
+<P><STRONG><FONT color=#800080>74,0,&lt;house&gt;</FONT></STRONG> 劫持特定所属方的东西：当一个对象劫持指定所属方的单位时触发</P>
+<P>这些事件是一次的，非持续性的。</P>
+<P>当一个对象被劫持时，事件72会在71之前被触发。<BR>而当劫持一个对象时，74会在73之前被触发。<BR>这允许特定所属方完成优先于一般情况不同的效果。</P>
+<P><STRONG>超级武器激活 (75 76)</STRONG>  </P>
+<P><STRONG><FONT color=#800080>75,0,&lt;super 
+weapon&gt;</FONT></STRONG> 超武激活：当特定所属方激活超武时触发</P>
+<P><STRONG><FONT color=#800080>76,0,&lt;super 
+weapon&gt;</FONT></STRONG> 
+超武断电：触发时，已方所属方断电。只有被允许IsPowered=true的超武才能用这个触发控制（不确定意思对不对，也可能指的是火风暴那种充电放电类型）</P>
+<P>这些事件是一次的，也是持续性的。</P>
+<P><STRONG>靠近路径点的超武(77)</STRONG>  
+</P>
+<P><STRONG></STRONG><BR><STRONG><FONT color=#800080>77,2,&lt;waypoint&gt;,&lt;super weapon 
+ID&gt;</FONT></STRONG>  
+在路径点附近激活的超武：当指定的超武在路径点附近被使用时触发</P>
+<P>这个事件是一次的，持续的。</P>
+<P>“near”的定义和“接近路径点”的定义一致</P>
+<P><STRONG>任意的逆向工程(78)</STRONG></P>
+<P><STRONG><FONT color=#800080>78,2,0,&lt;techno type 
+id&gt;</FONT></STRONG>  逆向工程：特定所属方获取逆向工程的科技类型时触发</P>
+<P>这一事件具备环境性质和非持续性。</P>
+<P>当一个单位被弄到逆向工程中时，即认为尊重ReversedAs=时，该事件将触发该类型</P>
+<P><STRONG>指定的逆向工程(79 80)</STRONG> </P>
+<P><STRONG><FONT color=#800080>79,0,0</FONT></STRONG>逆向工程任何东西：当指定的建筑成功丢进去一个单位完成逆向工程时触发</P>
+<P><STRONG><FONT color=#800080>80,2,0,&lt;techno type 
+id&gt;</FONT></STRONG>   逆向工程列表：当指定的建筑成功将一个特定单位完成逆向工程时触发</P>
+<P>这两个事件都是一次的，也是持续的。</P>
+<P>该事件将对放入逆向工程结构的单位进行触发，不考虑ReversedAs=，但只有当一个单元被成功逆向时才会触发，也就是说，每个逆向类型只触发一次，考虑ReversedAs=</P>
+<P>在进行逆向工程时，事件80会先于79触发。<BR>这允许特定所属方完成优先于一般情况不同的效果。</P>
+<P><STRONG>所属方拥有指定的单位类型数量(81 82)</STRONG> </P>
+<P><STRONG><FONT color=#800080>81,2,&lt;count&gt;,&lt;techno 
+type id&gt;</FONT></STRONG>   
+所属方拥有指定某单位的数量：当特定所属方至少拥有指定物品类型的次数时触发</P>
+<P><STRONG><FONT color=#800080>82,2,&lt;count&gt;,&lt;techno 
+type id&gt;</FONT></STRONG>   
+所属方不拥有指定某物品的数量：当所属方拥有指定物品类型的数量少于特定次数时触发</P>
+<P>这两个事件都是环境性和非持续性的。</P>
+<P><STRONG>指向的攻击和摧毁(83 84)</STRONG> </P>
+<P><STRONG><FONT color=#800080>83,0,0</FONT></STRONG> 被任何人摧毁：当一个特定对象被任何攻击（即便这个攻击没有来源）攻击或者破坏时触发</P>
+<P><STRONG><FONT color=#800080>84,0,&lt;house&gt;</FONT></STRONG>被特定所属方攻击或者破坏：一个特定单位遭受特定所属方攻击或破坏时触发</P>
+<P>这两个事件都是一次的，不具有持续性。</P>
+<P>这些事件反映了事件6和事件44的触发事件，但即使对象刚刚被第一次攻击摧毁，它们也会触发，也就是说，这也适合用于致命的击中。</P>
+<P>与原版不同的是，特定所属方的特定事件会先触发，以便让更特定的事件优先于不太特定的事件</P>
+<P><STRONG>被所属方摧毁（85）</STRONG></P>
+<P><STRONG><FONT color=#800080>85,0,&lt;house&gt;</FONT></STRONG> 被所属方摧毁：当特定单位在来源为特定所属方一切攻击手段击中被摧毁时触发</P>
+<P>这个事件是一次的，持续的。</P>
+<P>特定的所属方事件85将在通用事件7之前触发，用以使得较特定的事件优先于较不特定的事件。</P>
+<P><STRONG>技术类型数量不存在更多（86）</STRONG></P>
+<P><STRONG><FONT color=#800080>86,2,&lt;count&gt;,&lt;techno 
+type id&gt;</FONT></STRONG>  技术类型不存在一定数量：当指定技术类型的实例数不超过时触发</P>
+<P>这一事件具有环境性和非持久性。</P>
+<P><STRONG>所有的存活条件均被摧毁（87 88）</STRONG> </P>
+<P><STRONG><FONT color=#800080>87,0,&lt;house&gt;</FONT></STRONG> 摧毁所有的存活类单位：当指定的所属方已经没有任何KeepAlive=yes单位时触发</P>
+<P><STRONG><FONT color=#800080>88,0,&lt;house&gt;</FONT></STRONG> 所有存活类建筑被摧毁：当指定的所属方没有KeepAlive=yes的建筑时触发。</P>
+<P>这两个事件都是环境性和持续性的。</P></body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>IFV逻辑增强</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT size=4><STRONG>多种IFV</STRONG></FONT></SPAN>
+
+</P>
+<P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">所有有</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'"><FONT color=#800080><STRONG>Gunner=yes</STRONG></FONT></SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">的载具都能像</SPAN><SPAN 
+style="FONT-SIZE: 12pt; FONT-FAMILY: '微软雅黑'; mso-spacerun: 'yes'">IFV一样切换炮塔，因此你能拥有多种IFV</SPAN><FONT size=3 face=微软雅黑> 
+。</FONT>
+
+</P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=3 face=微软雅黑></FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=4 face=微软雅黑><STRONG>更多的炮塔和武器</STRONG></FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=3 face=微软雅黑>ARES平台支持超过18种不同的炮塔和VXL与HVA素材，这意味着<FONT color=#800080><STRONG>TurretCount</STRONG></FONT>现在可以设置为大于18的值，虽然不支持TurretCount值大于127（谁TM这么闲做这么多炮塔）。 
+以及理所当然的，武器也可以设置大于18的值了。<BR></FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=4 face=微软雅黑><STRONG>定义IFV模式</STRONG></FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=3 face=微软雅黑>InitiateWeaponIndex和InitiateTurretIndex可以丢了，不过之前如果在地图INI里改了IFV类单位的模式，可能需要重新改一下。</FONT><BR><BR><FONT color=#800080 size=3 face=微软雅黑><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>WeaponTurretIndexX=(integer 
+- turret index)</STRONG></FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=3 face=微软雅黑>在<FONT color=#800080><STRONG>WeaponX</STRONG></FONT>和<FONT color=#800080><STRONG>EliteWeaponX</STRONG></FONT>启用时将使用这个炮塔，通过乘客的<FONT color=#800080><STRONG>IFVMode</STRONG></FONT>来定义。<BR>X是从1到<FONT color=#800080><STRONG>WeaponCount</STRONG></FONT>的数。默认值为-1。</FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=3 face=微软雅黑>注意：</FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=3 face=微软雅黑>当步兵的IFVMode是0时WeaponX的X应该是1。例如，IFVMode=4会启用Weapon5指定的武器，使用的炮塔也是WeaponTurretIndex5。</FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=3 face=微软雅黑></FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=3 face=微软雅黑>Gunner=yes的单位可以让每一个武器有自己的提示文本，使用一下标签：</FONT>             </P><FONT color=#800080 size=3 face=微软雅黑><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>WeaponUINameX= 
+(CSF label)</STRONG></FONT> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=3 face=微软雅黑><SPAN 
+style="FONT-SIZE: 14px; FONT-FAMILY: monospace; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: bold; COLOR: rgb(0,0,0); FONT-STYLE: normal; TEXT-ALIGN: left; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: 0px; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; -webkit-text-stroke-width: 0px; font-variant-ligatures: normal; font-variant-caps: normal"></SPAN></FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=3 face=微软雅黑></FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=4 face=微软雅黑><STRONG>IFV维修语音</STRONG></FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=3 face=微软雅黑>现在ARES可以自定义IFV类单位的维修语音。</FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=3 face=微软雅黑><FONT color=#800080><STRONG>[VehicleType]</STRONG><STRONG>&gt;</STRONG><STRONG>VoiceIFVRepair= 
+(soundmd entry)</STRONG></FONT><BR>微观定义</FONT>             </P> 
+ <P class=p0 style="MARGIN-BOTTOM: 5pt; MARGIN-TOP: 5pt; TEXT-ALIGN: left"><FONT size=3 face=微软雅黑><FONT color=#800080><STRONG>[AudioVisual]</STRONG><STRONG>&gt;</STRONG><STRONG>VoiceIFVRepair= 
+(soundmd entry)</STRONG></FONT><BR>宏观定义，只用于[FV]</FONT>             </P></body>
+</html>

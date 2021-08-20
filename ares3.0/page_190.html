@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>起始设定</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<P><FONT face=微软雅黑 size=3><FONT size=4><STRONG>初始单位</STRONG></FONT><BR><FONT color=#800080><STRONG>[Country]</STRONG><STRONG>&gt;</STRONG><STRONG>StartInMultiplayer.Types= 
+(list of InfantryTypes and/or VehicleTypes)</STRONG></FONT>   
+  
+<BR>当遭遇战开始时，会有哪些单位被随机分配给这个国家的玩家。如果不设定，游戏会选取可用的AllowedToStartInMultiplayer单位。只支持InfantryTypes和VehicleTypes。使用&lt;none&gt; 
+来让这个国家没有任何初始单位。<BR>             
+               
+            
+    注意：现在如果没有起始步兵，不会再引起游戏崩溃了。</FONT></P><FONT face=微软雅黑 size=3>
+<P><BR><STRONG> 
+修正全局单位花费<BR></STRONG>默认情况下，游戏将通过汇总和平均可作为初始单位的单位的所有成本（仅考虑这局游戏的国家）来确定一个单位的平均成本。单位计数设置与此相乘。（译者：举例来说，A国家初始单位为10000块的EPIC单位，B国家初始单位为100块的基础兵，那么当游戏开始时B国家的初始单位数量会远远大于A国家初始单位数量，但是当一局游戏里只有两个B国家时双方初始单位数量就相对正常，这个条目就是说明了这样的现象。）</P>
+<P>             
+               
+            
+    </FONT><FONT face=微软雅黑 size=3><FONT color=#800080><STRONG>[General]</STRONG><STRONG>&gt;</STRONG><STRONG>StartInMultiplayerUnitCost= 
+(integer - credits)</STRONG></FONT>   
+<BR><FONT color=#000000>一个平均单位的固定学额。如果不设置，游戏将使用上述方法。在这种情况下，ARES现在将推断的平均单位成本输出到日志文件中。</FONT></FONT></P>
+<P><FONT face=微软雅黑 size=3><BR><STRONG><FONT size=4>初始建造场</FONT></STRONG> 
+<BR>现在允许玩家初始直接获得建造场，而不是MCV。<BR><FONT color=#800080><STRONG>[Country]</STRONG><STRONG>&gt;</STRONG><STRONG>StartInMultiplayer.WithConst= 
+(boolean)<BR></STRONG></FONT>设置玩家是否将从BuildConst得到一个可用的建筑来代替BaseUnit中的载具。默认否。</FONT></P></body>
+</html>

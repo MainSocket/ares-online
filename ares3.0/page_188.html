@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>升级设置</title>
+<meta name="GENERATOR" content="WinCHM">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style>
+html,body { 
+	/* Default Font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11pt;
+}
+</style>
+
+</head>
+
+<body>
+<P><FONT size=4 face=微软雅黑><STRONG>升级时的闪光时长全局设置</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑>YR里只有在升级到精英时才闪光，这个效果由EliteFlashTimer控制，ARES增加了升级到老兵时的效果。</FONT></P>
+<P><FONT color=#800080 size=3 face=微软雅黑><STRONG>[AudioVisual]</STRONG><STRONG>&gt;</STRONG><STRONG>VeteranFlashTimer= 
+(integer - frames)</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑>升级到老兵时闪光多长时间。默认0</FONT></P>
+<P><FONT size=3 face=微软雅黑></FONT>&nbsp;</P>
+<P><FONT size=4 face=微软雅黑><STRONG>音效，EVA和闪光</STRONG></FONT></P>
+<P><FONT size=3 face=微软雅黑><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>Promote.VeteranSound= 
+(sound)<BR></STRONG></FONT>单位升级到老兵时播放音效。默认[AudioVisual]<STRONG><FONT color=#000000>&gt;</FONT></STRONG>UpgradeVeteranSound</FONT><FONT size=3 face=微软雅黑><BR><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>Promote.EliteSound= 
+(sound)<BR></STRONG></FONT>单位升级到精英时播放音效。默认[AudioVisual]<STRONG><FONT color=#000000>&gt;</FONT></STRONG>UpgradeEliteSound</FONT></P><FONT size=3 face=微软雅黑>
+<P><BR><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>Promote.VeteranFlash= (integer - 
+frames)<BR></STRONG></FONT>升级到老兵闪光多长时间。默认[AudioVisual]<STRONG><FONT color=#000000>&gt;</FONT></STRONG>VeteranFlashTimer<BR><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>Promote.EliteFlash= (integer - 
+frames)<BR></STRONG></FONT>精英。默认[AudioVisual]<STRONG><FONT color=#000000>&gt;</FONT></STRONG>EliteFlashTimer</P>
+<P><BR><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>EVA.VeteranPromoted= (EVA 
+message)<BR></STRONG></FONT>  
+当单位升级到老兵是播放EVA。默认EVA_UnitPromoted<BR><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>EVA.ElitePromoted= 
+(EVA message)<BR></STRONG></FONT>精英。默认EVA_UnitPromoted</P>
+<P><FONT size=4><STRONG>精英和老兵时转换单位（NPExt多段升级）</STRONG></FONT></P>
+<P>只支持同类单位相互转换（步兵变步兵，载具变载具，飞机变飞机）</P>
+<P>-&nbsp;如果新单位子弹总数更少，则减少子弹数。 
+<BR>-&nbsp;生命值会被重新计算以使用新的Strength。<BR>-&nbsp;隐形会正常的移交。 <BR>-&nbsp;探照灯会重新定位。</P>
+<P><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>Promote.VeteranType= 
+(TechnoType)</STRONG> 
+</FONT>&nbsp;<BR>如果设置了，则当单位升级至老兵级时转换为该单位。默认none。</P>
+<P><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>Promote.EliteType= 
+(TechnoType)</STRONG> </FONT> 
+<BR>如果设置了，则当单位升级至精英级时转换为该单位。 默认none。</P>
+<P><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>Promote.VeteranExperience= 
+(double)</STRONG> </FONT> 
+<BR>该代码用来给予被老兵转换后的单位初始得到的经验倍率。可以将一个单位转换为另一个无等级的单位。（用-1.0来降低一级，这样一个老兵级单位变形后会成为另一个新兵级单位。）默认0.0。</P>
+<P><FONT color=#800080><STRONG>[TechnoType]</STRONG><STRONG>&gt;</STRONG><STRONG>Promote.EliteExperience= 
+(double)</STRONG> </FONT> 
+<BR>同上，不过用于精英级转换时。默认0.0。</P>
+<P>提示：如果单位跳过老兵级直接升级为精英级，则不会启动老兵级转换。&nbsp;</P>
+<P>注意：升级转换并不是递进的：假如一个单位转换后所处的经验等级仍然能够转换为下一个单位，这时转换不会发生。</P>
+<P>           
+              
+                 
+             
+       警告：转换有很多限制。比如如果转换后的步兵比以前更大（指Size），而他已经处于满载的载具里，升级转换不会发生。你不能改变Locomotor，如果单位可以进入载具或者建筑，并且单位可以升级，你不应该改变这个单位的大小。不能转换成有特殊武器的单位(时空，心控，寄生),……</P>
+<P><STRONG><FONT size=4>精英和老兵时获得的能力</FONT></STRONG></P><FONT color=#800080>EMPIMMUNE</FONT> 免疫EMP<BR><FONT color=#800080>PROTECTED_DRIVER</FONT> 免疫狙杀驾驶员<BR><FONT color=#800080>RADIMMUNE</FONT> 辐射免疫<BR><FONT color=#800080>UNWARPABLE</FONT> 
+无法被超时空传送<BR><FONT color=#800080>POISONIMMUNE</FONT> 免疫毒<BR><FONT color=#800080>PSIONICWEAPONIMMUNE</FONT> 免疫精神攻击<BR><FONT color=#800080>PSIONICSIMMUNE</FONT> 免疫控制（心灵控制超武依然可以有效）
+<P></FONT>&nbsp;</P></body>
+</html>

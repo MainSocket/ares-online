@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns:o = "urn:schemas-microsoft-com:office:office"><head>
+<title>建筑微损伤</title>
+<META content="text/html; charset=gb2312" http-equiv=Content-Type>
+<META name=GENERATOR content="MSHTML 8.00.7601.18934"></HEAD>
+<BODY>
+<P><FONT face=微软雅黑>在早期的游戏如TD和RA里建筑没电就会逐渐掉血，现在你也可以这样做。伤害弹头使用[General]?C4Warhead。</FONT></P>
+<P><FONT size=4 face=微软雅黑><STRONG>全局设置</STRONG></FONT></P>
+<P><FONT face=微软雅黑><FONT color=#800080><STRONG>[General]</STRONG><STRONG>&gt;</STRONG><STRONG>Degrade.Enabled= 
+(boolean)<BR></STRONG></FONT>是否启用该逻辑，伤害频率由<FONT color=#800080><STRONG>DamageDelay</STRONG></FONT>定义</FONT></P>
+<P><FONT face=微软雅黑><FONT color=#800080><STRONG>[General]</STRONG><STRONG>&gt;</STRONG><STRONG>Degrade.Percentage= 
+(double - 
+percentage)<BR></STRONG></FONT>损伤持续到建筑总血量的百分之几，1为不会损伤，0为损伤到建筑摧毁。默认黄血就停止损伤，即[AudioVisual]?ConditionYellow</FONT></P><FONT face=微软雅黑>
+<P><BR><FONT color=#800080><STRONG>[General]</STRONG><STRONG>&gt;</STRONG><STRONG>Degrade.AmountNormal= (int - 
+hitpoints)<BR></STRONG></FONT>电力充足时损伤伤害，默认0</P>
+<P><FONT color=#800080><STRONG>[General]</STRONG><STRONG>&gt;</STRONG><STRONG>Degrade.AmountConsumer= (int - 
+hitpoints)<BR></STRONG></FONT>电力不足时损伤伤害，默认1</P>
+<P><FONT size=4><STRONG>微观设置</STRONG></FONT></P>
+<P></FONT><FONT face=微软雅黑><FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>Degrade.Percentage= (double - 
+percentage)<BR></STRONG></FONT>损伤持续到多少停止。默认[General]?Degrade.Percentage</FONT></P><FONT face=微软雅黑>
+<P><BR><FONT color=#800080><STRONG>[BuildingType]</STRONG><STRONG>&gt;</STRONG><STRONG>Degrade.Amount= (int - 
+hitpoints)<BR></STRONG></FONT>伤害量，默认电力充足时和[General]?Degrade.AmountNormal一样，其他情况[General]?Degrade.AmountConsumer</P>
+<P><BR><STRONG><FONT size=4>国家设置</FONT></STRONG></P>
+<P></FONT><FONT face=微软雅黑><FONT color=#800080><STRONG>[Country]</STRONG><STRONG>&gt;</STRONG><STRONG>Degrades= 
+(boolean)<BR></STRONG></FONT>是否该国家启用该逻辑，有MultiplayPassive=yes的国家默认no，其他yes</FONT></P>
+<P><FONT face=微软雅黑><FONT color=#800080><STRONG>[House]</STRONG><STRONG>&gt;</STRONG><STRONG>Degrades= 
+(boolean)<BR></STRONG></FONT>同上，不过这个是用于任务的，默认[Country]?Degrades<BR></P></FONT></BODY></HTML>
